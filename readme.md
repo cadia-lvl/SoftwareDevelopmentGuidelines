@@ -1,3 +1,8 @@
+# LVL Software development guidelines
+This repository contains the software development guidelines for LVL.
+
+This is work in progress.
+
 # Goals
 - This should make people’s life easier
 - This should help us write quality software
