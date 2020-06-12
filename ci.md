@@ -1,20 +1,22 @@
-CI (Sunneva)
-When working on a project with others and preferably while working alone, a CI/CD system should be used to help the team collaborate. 
-CI stands for continuous integration and CI systems help to automate tests and keep our code base clean
-CD stands for Continuous delivery and Continuous deployment. That helps automate the delivery/deployment process by running our code through pipelines to prepare it for deployment.
+# CI
 
+When **working on a project with others** and preferably while working alone, a **CI system should be used**.
+- CI stands for continuous integration and CI.
+- **CI systems build software, run tests and alerts developers when a test doesn't pass**. This way developers can fix mistakes right away while they are still fresh in memory. This also helps avoid larger more time consuming conflicts and gives developers more donfidance in their code.
+- CD is often used with CI and stands for Continuous delivery and/or Continuous deployment. That helps automate the delivery/deployment process by running code through pipelines to prepare it for deployment.
 
-We use both Github Actions and Gitlab CI as CI/CD systems
-Easy to get started by adding the CI to the version control system we already use
-Both CI systems support Docker 
-Can both be hosted in the cloud so our devices don’t get clogged with tests and builds
-GitLab CI is already built into the core design of Gitlab so easy to get started
-Getting started guide: https://docs.gitlab.com/ee/ci/quick_start/
-More general information about GitLab CI: https://docs.gitlab.com/ee/ci/ 
+**The CI system we use is Github Actions**
+- Easy to get started by adding the CI to Github.
+- Includes Docker support
+- Is compleatly free for open repositories
+- Possible to use actions from others
+  * Azure and AWS for examplea
+- Tests can run on Github owned servers
+  * This spares our computers from hosting all the tests
 
-Github Actions can be added directly to your repository.
-Language and framework guidelines: https://help.github.com/en/actions/language-and-framework-guides 
-Packaging: https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions 
-TO DO: 
-[Explain better what a CI system does, building, etc.]
-[We only use Github Actions]
+### Further information:
+- [Core concepts](https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions)
+- [Language and framework guideline](https://help.github.com/en/actions/language-and-framework-guides) 
+- [Triggering workflows](https://help.github.com/en/actions/reference/events-that-trigger-workflows)
+- [Packaging(optional)](https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions) 
+
