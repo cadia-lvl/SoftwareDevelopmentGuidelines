@@ -36,6 +36,9 @@ Description of folder structure
 Papers/References
 citation snippet
 Ex: http://kaldi-asr.org/doc/about.html#about_reference
+### Acknowledgements
+This project was funded by the Language Technology Programme for Icelandic 2019-2023. The programme, which is managed and coordinated by [Almannarómur](https://almannaromur.is/), is funded by the Icelandic Ministry of Education, Science and Culture.
+
 API reference 
 If lengthy this should be a separate document
 APIs
