@@ -18,5 +18,5 @@ When **working on a project with others** and preferably while working alone, a 
 - [Core concepts](https://help.github.com/en/actions/getting-started-with-github-actions/core-concepts-for-github-actions)
 - [Language and framework guideline](https://help.github.com/en/actions/language-and-framework-guides) 
 - [Triggering workflows](https://help.github.com/en/actions/reference/events-that-trigger-workflows)
-- [Packaging(optional)](https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions) 
+- [Packaging](https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions) (optional)
 
