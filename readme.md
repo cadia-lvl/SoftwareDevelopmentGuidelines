@@ -34,3 +34,11 @@ An idea of how to structure the guide.
 - Documentation and more complex project structure
 - CI
 - Packaging
+
+## Contributors
+
+* Judy Fong <judyfong@ru.is>
+* Haukur Páll Jónsson <haukurpj@ru.is>
+* Sunneva Þorsteinsdóttir
+* Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
+* Ólafur Helgi Jónsson

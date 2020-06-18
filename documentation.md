@@ -1,58 +1,32 @@
-Documentation (Judy)
-All Projects
-Code should be self-documenting and when that’s not possible then it should be well documented within comments and overall documentation. In the case of python, documentation can be automatically generated from “docstrings.” Other languages and frameworks have similar features. Use easy to understand variables and function names; avoid ambiguous names. Use consistent styles throughout the whole codebase. The code should also be consistent with the general guidelines of the programming language.
-In complex projects, explain the folder structure in the README/document so it’s easier for new developers to get started
-Developer documentation should generally be in English. User guides should be in the same language of the users. [what are user guides]
-Add research papers to the repository if possible:  e.g. https://github.com/Eyra-is/Eyra/blob/master/Docs/Petursson_et_al_2016.pdf
+# Documentation
+## All Projects
+**Code should be self-documenting and when that’s not possible then it should be well documented within comments and overall documentation.** In the case of python, documentation can be automatically generated from “docstrings.” Other languages and frameworks have similar features. Use easy to understand variables and function names; avoid ambiguous names. Use consistent styles throughout the whole codebase. The code should also be consistent with the general guidelines of the programming language.
 
-Documentation for git repositories can live in the docs folder as a website. [explain] GitHub has a step by step guide of how to do that on their platform https://pages.github.com/
-Example: https://github.com/cadia-lvl/Eyra
+**Developer documentation should generally be in English.** Developer guides would be like installation guides, API documentation, Contribution guidelines, just any information that would help a developer use and modify this codebase faster.
+**User guides should be in the same language of the users.** User guides is documentation for user facing code. Within LVL example projects are [LOBE](https://github.com/cadia-lvl/LOBE.git) and [Eyra](https://github.com/cadia-lvl/Eyra.git) because both have user interfaces that don't involve code.
+Add research papers to the repository in a docs folder if possible. [Eyra has a conference paper in its docs folder](https://github.com/Eyra-is/Eyra/blob/master/Docs/Petursson_et_al_2016.pdf)
 
-Minimum README template (write in Markdown or rst): Explanation at: https://guides.github.com/features/wikis/
-Title
-Project description
-Table of Contents
-Installation
-software requirements
-dependencies
-Contribution guidelines
-This can also link to a separate Developer reference
-how to contribute
-creating issues
-(optional) where to get data
-(optional) testing
-(optional) design strategy
-Authors/Credit
-(if public grant) Mention the source of the funding and link
-Mention RU and the main authors with email
-License
-Mention which LICENSE the code uses (more examples in the LICENSE section)
+Documentation for git repositories can live in the docs folder as a website. Github has a feature called github-pages. This allows us to host a website directory from our code respositories. This is especially useful if we have user guides or API documentation. We don't need a whole server just for a few webpages. GitHub has a step by step guide of how to do that on their platform which is linked [here](https://pages.github.com/)
 
-You also might want add the following sections in your README:
-Changelog (if you have releases)
-Tutorial
-Description of folder structure
-    ex: http://kaldi-asr.org/doc/kaldi_for_dummies.html#kaldi_for_dummies_directories
-Papers/References
-citation snippet
-Ex: http://kaldi-asr.org/doc/about.html#about_reference
-### Acknowledgements
-This project was funded by the Language Technology Programme for Icelandic 2019-2023. The programme, which is managed and coordinated by [Almannarómur](https://almannaromur.is/), is funded by the Icelandic Ministry of Education, Science and Culture.
+We have provided a template for your projects' [README.md file](readme_template.md). It provides both the minimum sections and the optional sections. You can read more about why those sections here at [GitHub's guide](https://guides.github.com/features/wikis/). After you've read that explanation, you can delete whichever sections you don't need. 
 
-API reference 
-If lengthy this should be a separate document
-APIs
-The documentation should explain how to use an endpoint and outline outputs for both good and bad input. These often can be automatically generated and put into a docs folder in your repository. [consider outputting html TODO]
-API documentation example: http://docs.apis.is/
-Eyra API documentation: https://github.com/cadia-lvl/Eyra/blob/master/ClientServerAPI.md
-Command-line
-Terminal based software should have a help option “--help” “-h”
-This should explain what the script does, an example command, and explain the parameters.
-TODO: include code snippets for creating help in python and bash but otherwise these scripts have examples: https://github.com/cadia-lvl/broadcast_data_prep/tree/master/ruv
-Language specific documentation help
-Java - Maven automatically creates documentation for your API.
-Python - Sphinx automatically creates documentation from docstrings [TODO add that help usage is really easy to do for inputparser]
-[example of PyTorch documentation generated by Sphinx](https://pytorch.org/docs/stable/nn.html#parameters)
-pdoc3 - Another python documentation tool is pdoc3 which also uses docstrings. Installing it is as easy as `pip3 install pdoc3`. Generating the documentation is `pdoc --html --output-dir docs <path-to-your-module-with-init-py>`. There should be no subdirectories.
-[List of python tools to auto generate documentation](https://wiki.python.org/moin/DocumentationTools)
-Google C++ style guide
+## APIs
+
+The documentation should explain how to use an endpoint and outline outputs for both good and bad input. Remember, it's better to have some documentation than none at all. 
+
+These often can be automatically generated and put into a docs folder in your repository as a html pages which can then be hosted as a Github Pages website.
+
+[API documentation example](http://docs.apis.is/)
+
+[Eyra API documentation](https://github.com/cadia-lvl/Eyra/blob/master/ClientServerAPI.md)
+
+## Command-line tools
+Terminal based software should have a help option: `--help` or `-h` or both.Typing in the filename then either of these options should bring up some text explaining what the script does, an example command, and list explanations of the parameters.
+**TODO: include code snippets for creating help in python and bash directly in the file.**
+* [broadcast_data_prep/master/ruv/extract_from_ruv_api.py has an example at the bottom](https://github.com/cadia-lvl/broadcast_data_prep/blob/master/ruv/extract_from_ruv_api.py)
+* [bash example](https://github.com/cadia-lvl/broadcast_data_prep/blob/master/ruv/compare_hypothesis_and_expanded_888.sh)
+
+## Language/Tool specific documentation help
+* [Java](examples.md#Java)
+* [Python](examples.md#Python)
+* [C++](examples.md#C)
