@@ -1,7 +1,7 @@
 # Deliverables
 The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define deliverable types:
 - APP (stand-alone application)
-- MOD (a module which can be embedded in other applications)
+- MOD (a module which can be embedded into other applications)
 - ADD-ON (a plugin to a larger framework)
 - WEB (website with UI and/or API)
 - RES (language resource)
