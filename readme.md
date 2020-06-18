@@ -12,11 +12,12 @@ This is work in progress.
 ## Steps
 - [x] Write down initial guidelines
 - [x] Review on next meeting (9th of June)
-- [] Move this document to github, rearrange and edit
-- [] Implement this in our projects
-- [] Test this on someone
-- [] Present this to the group
-- [] Group should implement it over a single week - Jon or Hrafn should say this
+- [x] Move this document to github, rearrange and edit
+- [ ] Combine into a single file and do some editorial stuff.
+- [ ] Test this on someone.
+- [ ] Implement this in our projects
+- [ ] Present this to the group
+- [ ] Group should implement it over a single week - Jon or Hrafn should say this
 
 ## Things to keep in mind while writing this
 - This guide should be short and simple and mention what is required or optional
@@ -31,8 +32,8 @@ An idea of how to structure the guide.
 - License
 - Testing
 - Version control
-- Documentation and more complex project structure
 - CI
+- Documentation
 - Packaging
 
 ## Contributors
