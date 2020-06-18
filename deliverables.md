@@ -5,6 +5,7 @@ The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRw
 - ADD-ON (a plugin to a larger framework)
 - WEB (website with UI and/or API)
 - RES (language resource)
+
 These types are quite abstract and LVL does not deliver all of them.
 Due to this we further break down these deliverables to offer more concrete guidelines:
 - UI (web or other) = WEB, APP(?) or ADD-ON
