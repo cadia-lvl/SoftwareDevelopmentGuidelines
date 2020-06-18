@@ -27,6 +27,7 @@ Terminal based software should have a help option: `--help` or `-h` or both.Typi
 * [bash example](https://github.com/cadia-lvl/broadcast_data_prep/blob/master/ruv/compare_hypothesis_and_expanded_888.sh)
 
 ## Language/Tool specific documentation help
-* [Java](examples.md#Java)
 * [Python](examples.md#Python)
+* [Bash](examples.md#bash)
 * [C++](examples.md#C)
+* [Java](examples.md#Java)

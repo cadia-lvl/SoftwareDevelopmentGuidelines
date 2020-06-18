@@ -24,6 +24,8 @@ JavaScript backend & frontend
 ### Documentation
 [bash help usage example](https://github.com/cadia-lvl/broadcast_data_prep/blob/master/ruv/compare_hypothesis_and_expanded_888.sh)
 
+[Better Programming has a short list of Bash Best Practices](https://medium.com/better-programming/best-practices-for-bash-scripts-17229889774d)
+
 ## Kaldi recipes
 
 ## C++
