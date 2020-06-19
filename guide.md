@@ -6,6 +6,13 @@ This is work in progress.
 ## Table of Contents
 [TODO generate]
 
+## Notes for writing the guide
+This should be removed before releasing the guide.
+
+- This guide should be short and simple and mention what is required or optional
+- Offer examples
+- Add links to good resources
+
 ## About the guide
 ### Goals
 These guidelines should help us achieve the following goals:
