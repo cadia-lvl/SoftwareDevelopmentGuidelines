@@ -14,4 +14,6 @@ Due to this we further break down these deliverables to offer more concrete guid
 - Model = APP or RES?
 - Command line client = APP
 
+[Give more examples, what is a plugin? how you can view a model]
+
 Translating from the SÍM requirements to these deliverables will need to be discussed with a SÍM project manager to answer the question of "what do they expect?".
