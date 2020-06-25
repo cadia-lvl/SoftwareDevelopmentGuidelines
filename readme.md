@@ -4,7 +4,69 @@ This repository contains the software development guidelines for LVL.
 This is work in progress.
 
 ## Table of Contents
-[TODO generate]
+- [LVL Software development guidelines](#lvl-software-development-guidelines)
+  * [Table of Contents](#table-of-contents)
+  * [About the guide](#about-the-guide)
+    + [Goals](#goals)
+    + [Contributors](#contributors)
+    + [Deliverables](#deliverables)
+    + [All deliverables](#all-deliverables)
+  * [Project Structure](#project-structure)
+    + [Template README.md](#template-readmemd)
+  * [License](#license)
+  * [Documentation](#documentation)
+    + [All Projects](#all-projects)
+      - [Code should be self-documenting](#code-should-be-self-documenting)
+      - [Developer documentation](#developer-documentation)
+      - [User guides](#user-guides)
+      - [Git documentation](#git-documentation)
+      - [More information](#more-information)
+    + [APIs](#apis)
+      - [Further information](#further-information)
+    + [Command-line tools](#command-line-tools)
+      - [Further information](#further-information-1)
+    + [Language/Tool specific documentation help](#language-tool-specific-documentation-help)
+      - [help](#help)
+      - [tools](#tools)
+  * [Version control](#version-control)
+    + [Workflow](#workflow)
+      - [Branching](#branching)
+      - [Pull requests](#pull-requests)
+    + [Comments](#comments)
+    + [Semantic versioning](#semantic-versioning)
+    + [Further information](#further-information-2)
+  * [Testing](#testing)
+    + [Code](#code)
+    + [Web](#web)
+      - [Browsers](#browsers)
+      - [Suggested strategy](#suggested-strategy)
+    + [User testing](#user-testing)
+      - [User tests should only be used if you have planned time to make adjustments](#user-tests-should-only-be-used-if-you-have-planned-time-to-make-adjustments)
+      - [User testing should focus on a specific task](#user-testing-should-focus-on-a-specific-task)
+      - [Up to 4 people for tests](#up-to-4-people-for-tests)
+      - [Testing prototypes often gives no useful information](#testing-prototypes-often-gives-no-useful-information)
+  * [Continuous integration](#continuous-integration)
+    + [What is Continuous integration?](#what-is-continuous-integration-)
+    + [Getting started with Github Actions](#getting-started-with-github-actions)
+      - [Triggering workflows](#triggering-workflows)
+      - [Jobs](#jobs)
+      - [Example of a workflow:](#example-of-a-workflow-)
+    + [Further information](#further-information-3)
+  * [Packaging / Releasing](#packaging---releasing)
+  * [Examples](#examples)
+    + [Python library](#python-library)
+    + [PyTorch model](#pytorch-model)
+    + [JavaScript](#javascript)
+    + [Bash](#bash)
+      - [Documentation](#documentation-1)
+    + [Kaldi recipes](#kaldi-recipes)
+      - [README](#readme)
+      - [Documentation:](#documentation-)
+    + [C++](#c--)
+    + [Java](#java)
+      - [Documentation](#documentation-2)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Notes for writing the guide
 This should be removed before releasing the guide.
@@ -47,6 +109,7 @@ Due to this we further break down these deliverables to offer more concrete guid
 - Command line client (python package, bash) = APP, MOD
 
 Translating from the SÍM requirements to these deliverables will need to be discussed with a SÍM project manager to answer the question of "what do they expect?".
+
 
 ### All deliverables
 All deliverables should be provided along with instructions on how to run them and examples.
@@ -142,12 +205,13 @@ When a license has been chosen, simply copy the license text, fill in any additi
 ## Documentation
 [Some motivation missing]
 
+
 ### All Projects
 
 #### Code should be self-documenting 
 When that’s not possible it should be well documented within comments and overall documentation. 
 
-Iþn the case of python, documentation can be automatically generated from “docstrings.” Other languages and frameworks have similar features. Use easy to understand variables and function names, that is avoid ambiguous names. Use consistent styles throughout the whole codebase. The code should also be consistent with the general guidelines of the programming language.
+In the case of python, documentation can be automatically generated from “docstrings.” Other languages and frameworks have similar features. Use easy to understand variables and function names, that is avoid ambiguous names. Use consistent styles throughout the whole codebase. The code should also be consistent with the general guidelines of the programming language.
 
 #### Developer documentation
 Developer documentation should generally be in English. Developer guides would be like installation guides, API documentation, contribution guidelines, just any information that would help a developer use and modify this codebase faster. Along these lines, code examples, code snippets, and examples of (function/API) calls and the possible outputs would help users to understand much quicker.
@@ -162,6 +226,7 @@ Documentation for git repositories can live in the docs folder as a website. Git
 
 #### More information 
 We have provided a template for your projects' [README.md file](readme_template.md). It provides both the minimum sections and the optional sections. You can read more about why those sections here at [GitHub's guide](https://guides.github.com/features/wikis/). After you've read that explanation, you can delete whichever sections you don't need. 
+
 
 ### APIs
 The documentation should explain how to use an endpoint and outline outputs for both good and bad input. Remember, it's better to have some documentation than none at all. These often can be automatically generated and put into a docs folder in your repository as a html pages which can then be hosted as a Github Pages website.
@@ -200,6 +265,7 @@ Creating a help usage is really easy once you import the inputparser package.
 ## Version control
 Within Cadia-LVL, using git for version control is required. A clean repository with descriptive comments makes for a good representation of your project which makes it easier for new developers to join it. The following guidelines describe a way to maintain a project as such.
 
+
 ### Workflow
 If a project is public, **the master branch should always contain production ready code**. All merges to the master branch should include semantic version tags as listed below.
 
@@ -212,6 +278,7 @@ For larger projects, [Gitflow](https://www.atlassian.com/git/tutorials/comparing
 When adding new features or updates to the master branch, developers should write a pull request and let at least one other team member review their code before merging.
 
 Code reviews across projects are recommended but not required. Keeping more team members informed about your work can benefit the team as a whole.
+
 
 ### Comments
 Every commit message should include a short description of work being commited. Pull request comments should be more detailed. 
@@ -232,6 +299,7 @@ Version tags can be informative, especially to current users. Given a version nu
 ## Testing
 TODO: Add motivation
 
+
 ### Code
 All projects should attempt to do as much unit testing as possible.
 At minimum aim to have tests for mission critical algorithms and functions.
@@ -240,7 +308,6 @@ Unit tests inside each module cover this nicely but the implementation is depend
 
 ### Web
 A huge part of the web is portability and accessibility, so making sure your website works on all major devices and platforms is very important.
-
 
 #### Browsers
 When testing your website keep in mind the demographic that will be using the site, what devices they are using (mobile vs. desktop), and which browsers.
@@ -263,7 +330,6 @@ Major browsers for mobile are:
 
 If for some specific and clear reason a particular browser is needed make sure it is clearly stated on the page.
 You can use the [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) HTTP header to display warnings to all unsopported browsers.
-
 
 #### Suggested strategy
 Keep two entirely seperate deployments up and running, staging and production.
@@ -304,6 +370,7 @@ When **working on a project with others** and preferably while working alone, **
 ### What is Continuous integration?
 Continuous integration is a way to **build software, automaticly run tests and alert developers when a test doesn't pass**. This way developers can fix mistakes before they pile up and become difficult to manage. It aslo gives developers more confidance in their code and minimizes unknown errors. 
 
+
 ### Getting started with Github Actions
 Simply navigate to your repository and click the **Actions** on the right side of the *Pull request* button.
 Here you can choose to use workflows from others or click **set up a workflow yourself** to create your own.
@@ -312,7 +379,7 @@ Here you can choose to use workflows from others or click **set up a workflow yo
 Your workflow should run at minimum each time a push or a pull request is made to the master. It is also recomended to run a [schedualed](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule) workflow once a day for building, testing and packaging projects. If workflows take a long time to run it is advisable to run them over night. 
 
 #### Jobs
-Jobs should at minimum include testing and packaging the project. See more on testing [here](https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines#testing). 
+Jobs should at minimum include [testing](#testing) and [packaging](#packaging--releasing) for the project.
 
 Multiple jobs can be specified within each workflow. Besides testing and packaging, which are required, it is also recomented to run a linter on the project to ensure consistent styling across the project.
 
@@ -381,12 +448,15 @@ job:
       #--run your packaging steps--
   
 ```
-#### Further information
+
+
+### Further information
 - [Language and framework guidelines](https://help.github.com/en/actions/language-and-framework-guides) 
 - [Packaging on Github](https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions) (optional)
 - [Workflow triggers](https://help.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events)
 - [Further on triggering workflows](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#on).
 - Further on jobs](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs).
+
 
 ---
 
@@ -400,7 +470,7 @@ General reference for specific deliverables:
 - Model: Model files uploaded to CLARIN. Reference to a git label.
 - Command line: Compiled and optimized executable.
 
-Packaging should be done after testing and be a part of the continuous integration setup for all projects (excluding models).
+Packaging should be done after [testing](#testing) and be a part of the [continuous integration](#continuous-integration) setup for all projects (excluding models).
 
 ---
 
