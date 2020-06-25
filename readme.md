@@ -4,13 +4,13 @@ This repository contains the software development guidelines for LVL.
 This is work in progress.
 
 ## Table of Contents
+
 - [LVL Software development guidelines](#lvl-software-development-guidelines)
   * [Table of Contents](#table-of-contents)
   * [About the guide](#about-the-guide)
     + [Goals](#goals)
     + [Contributors](#contributors)
     + [Deliverables](#deliverables)
-    + [All deliverables](#all-deliverables)
   * [Project Structure](#project-structure)
     + [Template README.md](#template-readmemd)
   * [License](#license)
@@ -32,7 +32,7 @@ This is work in progress.
     + [Workflow](#workflow)
       - [Branching](#branching)
       - [Pull requests](#pull-requests)
-    + [Comments](#comments)
+    + [Commits](#commits)
     + [Semantic versioning](#semantic-versioning)
     + [Further information](#further-information-2)
   * [Testing](#testing)
@@ -53,6 +53,7 @@ This is work in progress.
       - [Example of a workflow:](#example-of-a-workflow-)
     + [Further information](#further-information-3)
   * [Packaging / Releasing](#packaging---releasing)
+    + [All deliverables](#all-deliverables)
   * [Examples](#examples)
     + [Python library](#python-library)
     + [PyTorch model](#pytorch-model)
@@ -67,6 +68,7 @@ This is work in progress.
       - [Documentation](#documentation-2)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Notes for writing the guide
 This should be removed before releasing the guide.
@@ -110,16 +112,6 @@ Due to this we further break down these deliverables to offer more concrete guid
 
 Translating from the SÍM requirements to these deliverables will need to be discussed with a SÍM project manager to answer the question of "what do they expect?".
 
-
-### All deliverables
-All deliverables should be provided along with instructions on how to run them and examples.
-
-All deliverables should be referenced with a git tag (f.ex. a version).
-This is done so that the code of a deliverable can be easily reviewed and for easy recreation.
-
-When releasing an artifact, be sure that all changes have been committed and a proper README file is in place so that the release process can be repeated by someone else.
-
-For more complex deliverables (which have many dependencies) we also recommend packaging the deliverable using docker.
 
 ---
 
@@ -280,7 +272,7 @@ When adding new features or updates to the master branch, developers should writ
 Code reviews across projects are recommended but not required. Keeping more team members informed about your work can benefit the team as a whole.
 
 
-### Comments
+### Commits
 Every commit message should include a short description of work being commited. Pull request comments should be more detailed. 
 
 ### Semantic versioning
@@ -368,7 +360,7 @@ This can be reduced somewhat by targetting very specific tasks early in the deve
 When **working on a project with others** and preferably while working alone, **Github Actions should be used for continuous integration**.
 
 ### What is Continuous integration?
-Continuous integration is a way to **build software, automaticly run tests and alert developers when a test doesn't pass**. This way developers can fix mistakes before they pile up and become difficult to manage. It aslo gives developers more confidance in their code and minimizes unknown errors. 
+Continuous integration is a way to **build software, automaticly run tests and alert developers when a test doesn't pass**. This way developers can fix mistakes before they pile up and become difficult to manage. It also gives developers more confidance in their code and minimizes unknown errors. 
 
 
 ### Getting started with Github Actions
@@ -376,16 +368,16 @@ Simply navigate to your repository and click the **Actions** on the right side o
 Here you can choose to use workflows from others or click **set up a workflow yourself** to create your own.
 
 #### Triggering workflows
-Your workflow should run at minimum each time a push or a pull request is made to the master. It is also recomended to run a [schedualed](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule) workflow once a day for building, testing and packaging projects. If workflows take a long time to run it is advisable to run them over night. 
+Your workflow should run at minimum each time a push or a pull request is made to the master. It is also recomended to run a [scheduled](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule) workflow once a day for building, testing and packaging projects. If workflows take a long time to run it is advisable to run them over night. 
 
 #### Jobs
 Jobs should at minimum include [testing](#testing) and [packaging](#packaging--releasing) for the project.
 
-Multiple jobs can be specified within each workflow. Besides testing and packaging, which are required, it is also recomented to run a linter on the project to ensure consistent styling across the project.
+Multiple jobs can be specified within each workflow. Besides testing and packaging, which are required, it is also recommended to run a linter on the project to ensure consistent styling across the project.
 
-Keep in mind that each job may take no longer than 6 hours to compleate or it will be automaticly ended.
+Keep in mind that each job may take no longer than 6 hours to complete or it will be automatically ended.
 
-When running a job we need to specify which machine it [runs on](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on). It is **strongly recomended to use github hosted runners**.
+When running a job we need to specify which machine it [runs on](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on). It is **strongly recommended to use github hosted runners**.
 
 #### Example of a workflow:
 ```
@@ -461,7 +453,7 @@ job:
 ---
 
 ## Packaging / Releasing
-When a project should be released it should be packaged so that it can be easily used by the intended users. The packaging depends on the deliverable type, see [deliverables.md](deliverables.md).
+When a project should be released it should be packaged so that it can be easily used by the intended users. The packaging depends on the deliverable type, see [deliverables](#deliverables).
 
 General reference for specific deliverables:
 - UI: Compiled and optimized executable.
@@ -471,6 +463,17 @@ General reference for specific deliverables:
 - Command line: Compiled and optimized executable.
 
 Packaging should be done after [testing](#testing) and be a part of the [continuous integration](#continuous-integration) setup for all projects (excluding models).
+
+### All deliverables
+All deliverables should be provided along with instructions on how to run them and examples.
+
+All deliverables should be referenced with a git tag (f.ex. a version).
+This is done so that the code of a deliverable can be easily reviewed and for easy recreation.
+
+When releasing an artifact, be sure that all changes have been committed and a proper README file is in place so that the release process can be repeated by someone else.
+
+For more complex deliverables (which have many dependencies) we also recommend packaging the deliverable using docker.
+
 
 ---
 
