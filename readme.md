@@ -93,7 +93,6 @@ These guidelines should help us achieve the following goals:
 * Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
 * Ólafur Helgi Jónsson <olafurhj@ru.is>
 
-
 ### Deliverables
 The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the following deliverable types:
 - APP: stand-alone application
@@ -112,6 +111,8 @@ Due to this we further break down these deliverables to offer more concrete guid
 
 Translating from the SÍM requirements to these deliverables will need to be discussed with a SÍM project manager to answer the question of "what do they expect?".
 
+
+[back to TOC](#table-of-contents)
 
 ---
 
@@ -177,6 +178,8 @@ You would have a citation snippet here as a code block
 ```
 
 
+[back to TOC](#table-of-contents)
+
 ## License
 All of the projects we work on need to have licenses. A single LICENSE file, mentioned and linked from the README, suffices. Adding a license header in every single file is optional.
 
@@ -191,6 +194,8 @@ For more help choosing a license, see [Choosing a license](https://choosealicens
 
 When a license has been chosen, simply copy the license text, fill in any additional information required (like copyright owner and year) and write it to a LICENCE file in the repository.
 
+
+[back to TOC](#table-of-contents)
 
 ---
 
@@ -252,6 +257,8 @@ Creating a help usage is really easy once you import the inputparser package.
 - pdoc3 : Another python documentation tool is pdoc3 which also uses docstrings. Installing it is as easy as `pip3 install pdoc3`. Generating the documentation is `pdoc --html --output-dir docs <path-to-your-module-with-init-py>`. There should be no subdirectories.
 
 
+[back to TOC](#table-of-contents)
+
 ---
 
 ## Version control
@@ -285,6 +292,8 @@ Version tags can be informative, especially to current users. Given a version nu
 - [Read more about semantic versioning](https://semver.org/)
 - [How to use tags to apply semantic versioning](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag)
 - [Back to top](https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines#table-of-contents)
+
+[back to TOC](#table-of-contents)
 
 ---
 
@@ -352,6 +361,8 @@ If you have more users to test, think about trying to test different things or d
 Users will most likely point out things that you know are missing and are less likely to give the feedback you are looking for.
 This can be reduced somewhat by targetting very specific tasks early in the development, see point about specific tasks.
 
+
+[back to TOC](#table-of-contents)
 
 ---
 
@@ -450,6 +461,8 @@ job:
 - Further on jobs](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs).
 
 
+[back to TOC](#table-of-contents)
+
 ---
 
 ## Packaging / Releasing
@@ -474,6 +487,8 @@ When releasing an artifact, be sure that all changes have been committed and a p
 
 For more complex deliverables (which have many dependencies) we also recommend packaging the deliverable using docker.
 
+
+[back to TOC](#table-of-contents)
 
 ---
 
@@ -509,3 +524,6 @@ A good documentation is provided: [kaldi-asr](http://kaldi-asr.org/doc/about.htm
 
 #### Documentation
 [Maven](https://maven.apache.org/) automatically creates documentation for your API.
+
+[back to TOC](#table-of-contents)
+
