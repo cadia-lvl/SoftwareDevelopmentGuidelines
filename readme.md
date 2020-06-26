@@ -19,7 +19,7 @@ This is work in progress.
       - [Code should be self-documenting](#code-should-be-self-documenting)
       - [Developer documentation](#developer-documentation)
       - [User guides](#user-guides)
-      - [Git documentation](#git-documentation)
+      - [Publishing documentation](#publishing-documentation)
       - [More information](#more-information)
     + [APIs](#apis)
       - [Further information](#further-information)
@@ -57,7 +57,8 @@ This is work in progress.
   * [Examples](#examples)
     + [Python library](#python-library)
     + [PyTorch model](#pytorch-model)
-    + [JavaScript](#javascript)
+    + [Web Technologies](#web-technologies)
+      - [JavaScript](#javascript)
     + [Bash](#bash)
       - [Documentation](#documentation-1)
     + [Kaldi recipes](#kaldi-recipes)
@@ -218,7 +219,7 @@ User guides should be in the language of the users. User guides is documentation
 
 Add research papers to the repository in a docs folder if possible. [Eyra has a conference paper in its docs folder](https://github.com/Eyra-is/Eyra/blob/master/Docs/Petursson_et_al_2016.pdf)
 
-#### Git documentation
+#### Publishing documentation
 Documentation for git repositories can live in the docs folder as a website. Github has a feature called github-pages. This allows us to host a website directory from our code respositories. This is especially useful if we have user guides or API documentation. Thus, we don't need a whole server just for a few webpages. GitHub has a step by step guide of how to do that on their platform which is linked [here](https://pages.github.com/).
 
 #### More information 
@@ -247,7 +248,7 @@ Terminal based software should have a help option: `--help` or `-h` or both. Typ
 - [Java](examples.md#Java)
 
 #### help
-Creating a help usage is really easy once you import the inputparser package.
+In python3.8, creating a help usage is really easy once you import the [argparse](https://docs.python.org/3/library/argparse.html) package.
 [broadcast_data_prep/master/ruv/extract_from_ruv_api.py has an example at the bottom](https://github.com/cadia-lvl/broadcast_data_prep/blob/master/ruv/extract_from_ruv_api.py)
 
 #### tools
@@ -472,7 +473,7 @@ General reference for specific deliverables:
 - UI: Compiled and optimized executable.
 - Server: Compiled and optimized executable.
 - Library: According to language convention.
-- Model: Model files uploaded to CLARIN. Reference to a git label.
+- Model: Model files uploaded to CLARIN. Reference to a git tag.
 - Command line: Compiled and optimized executable.
 
 Packaging should be done after [testing](#testing) and be a part of the [continuous integration](#continuous-integration) setup for all projects (excluding models).
@@ -498,7 +499,10 @@ For more complex deliverables (which have many dependencies) we also recommend p
 
 ### PyTorch model
 
-### JavaScript
+### Web Technologies
+[Web Technologies reference](https://developer.mozilla.org/en-US/docs/Web)
+
+#### JavaScript
 JavaScript backend & frontend
 
 ### Bash
