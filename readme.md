@@ -4,72 +4,138 @@ This repository contains the software development guidelines for LVL.
 This is work in progress.
 
 ## Table of Contents
-
-- [LVL Software development guidelines](#lvl-software-development-guidelines)
-  * [Table of Contents](#table-of-contents)
-  * [About the guide](#about-the-guide)
-    + [Goals](#goals)
-    + [Contributors](#contributors)
-    + [Deliverables](#deliverables)
-  * [Project Structure](#project-structure)
-    + [Template README.md](#template-readmemd)
-  * [License](#license)
-  * [Documentation](#documentation)
-    + [All Projects](#all-projects)
-      - [Code should be self-documenting](#code-should-be-self-documenting)
-      - [Developer documentation](#developer-documentation)
-      - [User guides](#user-guides)
-      - [Publishing documentation](#publishing-documentation)
-      - [More information](#more-information)
-    + [APIs](#apis)
-      - [Further information](#further-information)
-    + [Command-line tools](#command-line-tools)
-      - [Further information](#further-information-1)
-    + [Language/Tool specific documentation help](#language-tool-specific-documentation-help)
-      - [help](#help)
-      - [tools](#tools)
-  * [Version control](#version-control)
-    + [Workflow](#workflow)
-      - [Branching](#branching)
-      - [Pull requests](#pull-requests)
-    + [Commits](#commits)
-    + [Semantic versioning](#semantic-versioning)
-    + [Further information](#further-information-2)
-  * [Testing](#testing)
-    + [Code](#code)
-    + [Web](#web)
-      - [Browsers](#browsers)
-      - [Suggested strategy](#suggested-strategy)
-    + [User testing](#user-testing)
-      - [User tests should only be used if you have planned time to make adjustments](#user-tests-should-only-be-used-if-you-have-planned-time-to-make-adjustments)
-      - [User testing should focus on a specific task](#user-testing-should-focus-on-a-specific-task)
-      - [Up to 4 people for tests](#up-to-4-people-for-tests)
-      - [Testing prototypes often gives no useful information](#testing-prototypes-often-gives-no-useful-information)
-  * [Continuous integration](#continuous-integration)
-    + [What is Continuous integration?](#what-is-continuous-integration-)
-    + [Getting started with Github Actions](#getting-started-with-github-actions)
-      - [Triggering workflows](#triggering-workflows)
-      - [Jobs](#jobs)
-      - [Example of a workflow:](#example-of-a-workflow-)
-    + [Further information](#further-information-3)
-  * [Packaging / Releasing](#packaging---releasing)
-    + [All deliverables](#all-deliverables)
-  * [Examples](#examples)
-    + [Python library](#python-library)
-    + [PyTorch model](#pytorch-model)
-    + [Web Technologies](#web-technologies)
-      - [JavaScript](#javascript)
-    + [Bash](#bash)
-      - [Documentation](#documentation-1)
-    + [Kaldi recipes](#kaldi-recipes)
-      - [README](#readme)
-      - [Documentation:](#documentation-)
-    + [C++](#c--)
-    + [Java](#java)
-      - [Documentation](#documentation-2)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
+<details>
+<summary>CLick to see table of contents</summary>
+ <br/>
+ <ol>
+  <details>
+   <summary><a href="#about-the-guide">About the guide</a></summary>
+    <ul>
+     <li><a href="#goals">Goals</a></li>
+     <li><a href="#contributors">Contributors</a></li>
+     <li><a href="#deliverables">Deliverables</a></li>
+    </ul>
+  </details>
+  <details>
+   <summary><a href="#project-structure">Project Structure</a></summary>
+   <ul>
+    <li><a href="#template-readmemd">README template</a></li>
+   </ul>
+  </details>
+  <details>
+   <summary><a href="#license">License</a></summary>
+  </details>
+  <details>
+   <summary><a href="#documentation">Documentation</a></summary>
+   <ul>
+    <li><a href="#all-projects">All Projects</a>
+     <ul>
+    <li><a href="#code-should-be-self-documenting">Code should be self-documenting</a></li>
+    <li><a href="#developer-documentation">Developer documentation](#</a></li>
+    <li><a href="#user-guides">User guides</a></li>
+    <li><a href="#git-documentation">Git documentation</a></li>
+    <li><a href="#more-information">More information</a></li>
+   </ul>
+    </li>
+    <li><a href="#apis">APIs</a>
+     <ul>
+      <li><a href="#further-information">Further information</a></li>
+     </ul>
+    </li>
+    <li><a href="#command-line-tools">Command-line tools</a>
+     <ul>
+      <li><a href="#further-information-1">Further information</a></li>
+     </ul>
+    </li>
+    <li><a href="#languagetool-specific-documentation-help">Language/Tool specific documentation help</a>
+     <ul>
+      <li><a href="#help">help</a></li>
+      <li><a href="#tools">tools</a></li>
+     </ul>
+    </li>
+   </ul>
+  </details>
+  <details>
+  <summary><a href="#version-control">Version control</a></summary>
+  <ul>
+   <li><a href="#workflow">Workflow</a>
+    <ul>
+     <li><a href="#branching">Branching</a></li>
+     <li><a href="#pull-requests">Pull requests</a></li>
+    </ul>
+   </li>
+   <li><a href="#commits">Commits</a></li>
+   <li><a href="#semantic-versioning">Semantic versioning</a></li>
+   <li><a href="#further-information-2">Further information</a></li>
+  </ul>
+  </details>
+  <details>
+  <summary><a href="#testing">Testing</a></summary>
+  <ul>
+   <li><a href="#code">Code</a></li>
+   <li><a href="#web">Web</a>
+    <ul>
+     <li><a href="#browsers">Browsers</a></li>
+     <li><a href="#suggested-strategy">Suggested strategy</a></li>
+    </ul>
+   </li>
+   <li><a href="#user-testing">User testing</a>
+    <ul>
+     <li><a href="#user-tests-should-only-be-used-if-you-have-planned-time-to-make-adjustments">User tests should only be used if you have planned time to make adjustments</a></li>
+     <li><a href="#user-testing-should-focus-on-a-specific-task">User testing should focus on a specific task</a></li>
+     <li><a href="#testing-prototypes-often-gives-no-useful-information">Testing prototypes often gives no useful information</a></li>
+    </ul>
+   </li>
+  </ul>
+  </details>
+  <details>
+   <summary><a href="#continuous-integration">Continuous integration</a></summary>
+   <ul>
+    <li><a href="#what-is-continuous-integration">What is Continuous integration?</a></li>
+    <li><a href="#getting-started-with-github-actions">Getting started with Github Actions</a>
+     <ul>
+      <li><a href="#triggering-workflows">Triggering workflows</a></li>
+      <li><a href="#jobs">Jobs</a></li>
+      <li><a href="#example-of-a-workflow">Example of a workflow:</a></li>
+     </ul>
+    </li>
+    <li><a href="#further-information-3">Further information</a></li>
+   </ul>
+  </details>
+  <details>
+   <summary><a href="#packaging--releasing">Packaging / Releasing</a></summary>
+   <ul>
+    <li><a href="#all-deliverables">All deliverables</a></li>
+   </ul>
+  </details>
+  <details>
+   <summary><a href="#examples">Examples</a></summary>
+   <ul>
+    <li><a href="#python-library">Python library</a></li>
+    <li><a href="#pytorch-model">PyTorch model</a></li>
+    <li><a href="#javascript">JavaScript</a></li>
+    <li><a href="#bash">Bash</a>
+     <ul>
+      <li><a href="#documentation-1">Documentation</a></li>
+     </ul>
+    </li>
+    <li><a href="#kaldi-recipes">Kaldi recipes</a>
+     <ul>
+      <li><a href="#readme">README</a></li>
+      <li><a href="#documentation-2">Documentation:</a></li>
+     </ul>
+    </li>
+    <li><a href="#c">C++</a></li>
+    <li><a href="java">Java</a>
+     <ul>
+      <li><a href="#documentation-3">Documentation</a></li>
+     </ul>
+    </li>
+   </ul>
+  </details>
+</ol>
+</details>
+<!-- <a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>-->
 
 ## Notes for writing the guide
 This should be removed before releasing the guide.
@@ -88,11 +154,11 @@ These guidelines should help us achieve the following goals:
 
 
 ### Contributors
-* Judy Fong <judyfong@ru.is>
-* Haukur Páll Jónsson <haukurpj@ru.is>
-* Sunneva Þorsteinsdóttir <sunnevath@ru.is>
-* Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
-* Ólafur Helgi Jónsson <olafurhj@ru.is>
+<a href="https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=cadia-lvl/SoftwareDevelopmentGuidelines" />
+</a>
+<!-- Made with [contributors-img](https://contributors-img.web.app). -->
+
 
 ### Deliverables
 The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the following deliverable types:
