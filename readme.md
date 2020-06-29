@@ -4,7 +4,6 @@ This repository contains the software development guidelines for LVL.
 This is work in progress.
 
 ## Table of Contents
-<!-- ⛔️ MD-MAGIC-EXAMPLE:START (TOC:collapse=true&collapseText=Click to expand) -->
 <details>
 <summary>CLick to see table of contents</summary>
  <br/>
@@ -136,7 +135,6 @@ This is work in progress.
   </details>
 </ol>
 </details>
-<!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
 <!-- <a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>-->
 
 
