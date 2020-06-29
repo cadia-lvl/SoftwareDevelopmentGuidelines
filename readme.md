@@ -161,9 +161,9 @@ These guidelines should help us achieve the following goals:
 * Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
 * Ólafur Helgi Jónsson <olafurhj@ru.is>
 
-<!-- hægt fyrir public repository
-<a href="https://github.com/cadia-lvl/ictk/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=cadia-lvl/ictk" />
+<!--
+<a href="https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=cadia-lvl/SoftwareDevelopmentGuidelines" />
 </a> -->
 <!-- Made with [contributors-img](https://contributors-img.web.app). -->
 
