@@ -5,7 +5,7 @@ This is work in progress.
 
 ## Table of Contents
 <details>
-<summary>CLick to see table of contents</summary>
+<summary>Click to see table of contents</summary>
  <br/>
  <ol>
   <details>
