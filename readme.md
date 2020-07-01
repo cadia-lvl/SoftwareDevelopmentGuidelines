@@ -134,6 +134,9 @@ This is work in progress.
     </li>
    </ul>
   </details>
+  <details>
+   <summary><a href="#dictionary">Dictionary</a></summary>
+  </details>
 </ol>
 </details>
 <!-- <a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>-->
