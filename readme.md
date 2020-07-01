@@ -14,6 +14,7 @@ This is work in progress.
      <li><a href="#goals">Goals</a></li>
      <li><a href="#contributors">Contributors</a></li>
      <li><a href="#deliverables">Deliverables</a></li>
+     <li><a href="#dictionary">Dictionary</a></li>
     </ul>
   </details>
   <details>
@@ -106,6 +107,7 @@ This is work in progress.
    <summary><a href="#packaging--releasing">Packaging / Releasing</a></summary>
    <ul>
     <li><a href="#all-deliverables">All deliverables</a></li>
+    <li><a href="#further-information-4">Further information</a></li>
    </ul>
   </details>
   <details>
@@ -161,12 +163,7 @@ These guidelines should help us achieve the following goals:
 
 
 ### Deliverables
-The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the following deliverable types:
-- APP: stand-alone application
-- MOD: a module which can be embedded into other applications
-- ADD-ON: a plugin to a larger framework
-- WEB: website with UI and/or API
-- RES: language resource
+The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the deliverable types APP, MOD, ADD-ON, WEB and RES.
 
 These types are quite abstract and LVL does not deliver all of them.
 Due to this we further break down these deliverables to offer more concrete guidelines:
@@ -178,6 +175,16 @@ Due to this we further break down these deliverables to offer more concrete guid
 
 Translating from the SÍM requirements to these deliverables will need to be discussed with a SÍM project manager to answer the question of "what do they expect?".
 
+### Dictionary
+
+| Word   | Meaning                                                |
+| :----- | :-----------------------------------------------------:|
+| ADD-ON | a plugin to a larger framework                         |
+| APP    | stand-alone application                                |
+| CD     | Continuous Deployment / Continuous Delivery            |
+| CI     | Continuous Integration                                 |
+| MOD    | a module which can be embedded into other applications |
+| RES    | language resource                                      |
 
 [back to TOC](#table-of-contents)
 
@@ -192,7 +199,7 @@ README.md
 LICENSE
 docs/
 ```
-
+In this example, the docs folder contains other documents. Other scripts such as .py and .sh files should be in the root folder.
 
 ### Template README.md
 ```
@@ -243,7 +250,8 @@ Explain how people can contribute to this repository. This can also link to a se
 # Papers/References (Optional)
 You would have a citation snippet here as a code block
 ```
-
+For papers not yet accepted it is fine to mention you have submitted a paper to a particular conference and mention how you
+will reference it once has been accepted. For example you could add a citation or include the paper in the docs folder. 
 
 [back to TOC](#table-of-contents)
 
@@ -253,7 +261,7 @@ All of the projects we work on need to have licenses. A single LICENSE file, men
 If a project does not contain a license, the default copyright is in place which means that no-one is allowed to make derivative work with your code.
 
 We want our code to be freely available for everyone so we prefer permissive licenses such as
-- Apachce 2.0 (quite permissive)
+- Apache 2.0 (quite permissive)
 - MIT License (very permissive)
 - CC BY 4.0 (for resources)
 
@@ -400,7 +408,7 @@ If for some specific and clear reason a particular browser is needed make sure i
 You can use the [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) HTTP header to display warnings to all unsopported browsers.
 
 #### Suggested strategy
-Keep two entirely seperate deployments up and running, staging and production.
+Keep two entirely separate deployments up and running, staging and production.
 Deploy all changes first to the staging environment (this can be done automatically).
 
 Preferably have multiple users test all major changes on the staging deployment before deploying to production.
@@ -554,6 +562,10 @@ When releasing an artifact, be sure that all changes have been committed and a p
 
 For more complex deliverables (which have many dependencies) we also recommend packaging the deliverable using docker.
 
+### Further information
+- An example on how to make pip packages can be found [here](https://packaging.python.org/tutorials/packaging-projects/).
+- An example of a pip package is the [Mideind tokenizer](https://github.com/mideind/Tokenizer#installation) 
+
 
 [back to TOC](#table-of-contents)
 
@@ -596,4 +608,3 @@ A good documentation is provided: [kaldi-asr](http://kaldi-asr.org/doc/about.htm
 [Maven](https://maven.apache.org/) automatically creates documentation for your API.
 
 [back to TOC](#table-of-contents)
-
