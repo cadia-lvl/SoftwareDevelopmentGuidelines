@@ -166,7 +166,7 @@ The guide can be summarized as the following:
 
 ### Other resources
 - [Compute](https://github.com/cadia-lvl/compute) for information about the cluster (called Terra) at LVL.
-- The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) for writing and delivering software.
+- [SÍM guidelines](SIM_software_development_standards.pdf) for writing and delivering software.
 
 ### Deliverables
 The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the deliverable types APP, MOD, ADD-ON, WEB and RES.
