@@ -14,6 +14,7 @@ This is work in progress.
      <li><a href="#goals">Goals</a></li>
      <li><a href="#contributors">Contributors</a></li>
      <li><a href="#deliverables">Deliverables</a></li>
+     <li><a href="#dictionary">Dictionary</a></li>
     </ul>
   </details>
   <details>
@@ -134,9 +135,6 @@ This is work in progress.
     </li>
    </ul>
   </details>
-  <details>
-   <summary><a href="#dictionary">Dictionary</a></summary>
-  </details>
 </ol>
 </details>
 <!-- <a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>-->
@@ -165,12 +163,7 @@ These guidelines should help us achieve the following goals:
 
 
 ### Deliverables
-The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the following deliverable types:
-- APP: stand-alone application
-- MOD: a module which can be embedded into other applications
-- ADD-ON: a plugin to a larger framework
-- WEB: website with UI and/or API
-- RES: language resource
+The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the deliverable types APP, MOD, ADD-ON, WEB and RES.
 
 These types are quite abstract and LVL does not deliver all of them.
 Due to this we further break down these deliverables to offer more concrete guidelines:
@@ -182,6 +175,16 @@ Due to this we further break down these deliverables to offer more concrete guid
 
 Translating from the SÍM requirements to these deliverables will need to be discussed with a SÍM project manager to answer the question of "what do they expect?".
 
+### Dictionary
+
+| Word   | Meaning                                                |
+| :----- | :-----------------------------------------------------:|
+| ADD-ON | a plugin to a larger framework                         |
+| APP    | stand-alone application                                |
+| CD     | Continuous Deployment / Continuous Delivery            |
+| CI     | Continuous Integration                                 |
+| MOD    | a module which can be embedded into other applications |
+| RES    | language resource                                      |
 
 [back to TOC](#table-of-contents)
 
@@ -605,14 +608,3 @@ A good documentation is provided: [kaldi-asr](http://kaldi-asr.org/doc/about.htm
 [Maven](https://maven.apache.org/) automatically creates documentation for your API.
 
 [back to TOC](#table-of-contents)
-
-## Dictionary
-
-| Word   | Meaning                                                |
-| :----- | :-----------------------------------------------------:|
-| ADD-ON | a plugin to a larger framework                         |
-| APP    | stand-alone application                                |
-| CD     | Continuous Deployment / Continuous Delivery            |
-| CI     | Continuous Integration                                 |
-| MOD    | a module which can be embedded into other applications |
-| RES    | language resource                                      |
