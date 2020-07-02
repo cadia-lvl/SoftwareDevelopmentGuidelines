@@ -164,7 +164,7 @@ We encourage you to use Markdown All in One, VS Code Extension.
 Each repository should contain the following files:
 
 - `README.md`
-- `LICENCE.md`
+- `LICENCE`
 - `CONTRIBUTING.md`
 - `ROADMAP.md`
 
