@@ -444,10 +444,10 @@ This can be reduced somewhat by targetting very specific tasks early in the deve
 ---
 
 ## Linting
-Linting is any form of **static analysis** on code without running it.
-It alerts you of **possible errors**, **missing documentation** or **overly complex code** without writing tests.
-These are easily incorporated into the [continuous integration system](#continuous-integration)
-Using (some) linting is **required** in all projects.
+Linters perform **static analysis** on code without running it.
+They alert you of **possible errors**, **missing documentation** or **overly complex code** without writing tests.
+They are easily incorporated into the [continuous integration system](#continuous-integration).
+Using (some) linters is **required** in all projects.
 Adding linters to your **IDE** is very easy and can be configured to run on file-save.
 
 ### Python
@@ -472,7 +472,7 @@ We highly suggest [`black`](https://github.com/psf/black)
 
 ## Continuous integration
 
-When **working on a project with others** and preferably while working alone, we recommend **Github Actions for continuous integration**.
+When **working on a project with others** and preferably while working alone, you should use a CI system. We recommend **Github Actions** for this.
 
 ### What is Continuous integration?
 Continuous integration is a way to **build software (compile), automatically run [tests](#testing), [lint and check documentation](#linting) and alert developers when something is wrong**.
