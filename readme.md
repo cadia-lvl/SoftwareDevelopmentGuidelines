@@ -14,6 +14,8 @@ This is work in progress.
      <li><a href="#goals">Goals</a></li>
      <li><a href="#contributors">Contributors</a></li>
      <li><a href="#deliverables">Deliverables</a></li>
+     <li><a href="#contributors">Contributors>/a><li>
+     <li><a href="#contribution-guidelines">Contribution Guidelines</a><li>
      <li><a href="#dictionary">Dictionary</a></li>
     </ul>
   </details>
@@ -224,7 +226,7 @@ docs/      # Contains automatically generated documentation in HTML.
 Other scripts such as .py and .sh files should be in the root folder.
 
 ### Template README.md
-A readme.md template can be found [here](https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines/blob/moving_templates_and_such/readme_template.md).
+A readme.md template can be found [here](./readme_template.md).
 
 [back to TOC](#table-of-contents)
 
@@ -450,7 +452,7 @@ This defines the steps you would like to perform when you push changes.
 Your workflow should run at minimum each time a push or a pull request is made to the master.
 It is also recomended to run a [scheduled](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule) workflow once a day, in-case a dependency of your project is updated and breaks your code.
 
-An example workflow can be found [here](https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines/blob/moving_templates_and_such/workflow_example.md)
+An example workflow can be found [here](./workflow_example.md)
 
 
 ### Further information
@@ -458,7 +460,7 @@ An example workflow can be found [here](https://github.com/cadia-lvl/SoftwareDev
 - [Packaging on Github](https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions) (optional)
 - [Workflow triggers](https://help.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events)
 - [Further on triggering workflows](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#on).
-- Further on jobs](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs).
+- [Further on jobs](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs).
 
 
 [back to TOC](#table-of-contents)
