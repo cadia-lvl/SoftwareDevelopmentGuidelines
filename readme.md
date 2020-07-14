@@ -97,7 +97,6 @@ This is work in progress.
      <ul>
       <li><a href="#triggering-workflows">Triggering workflows</a></li>
       <li><a href="#jobs">Jobs</a></li>
-      <li><a href="#example-of-a-workflow">Example of a workflow:</a></li>
      </ul>
     </li>
     <li><a href="#further-information-3">Further information</a></li>
@@ -187,6 +186,17 @@ Translating from the SÍM requirements to these deliverables will need to be dis
 </a>
 <!-- Made with [contributors-img](https://contributors-img.web.app). -->
 
+#### Names and emails of contributors 
+
+* Haukur Páll Jónsson <haukurpj@ru.is>
+* Judy Yum Fong <judyfong@ru.is>
+* Ólafur Helgi Jónsson <olafurhj@ru.is>
+* Sunneva Þorsteinsdóttir <sunnevath@ru.is>
+* Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
+
+### Contribution guidelines
+To contribute to this project please submit a pull request to the master branch and request a review from someone in the software guidelines team. If you have a lot of suggestions feel to make multiple requests. 
+
 ### Dictionary
 
 | Word   | Meaning                                                |
@@ -213,8 +223,8 @@ docs/      # Contains automatically generated documentation in HTML.
 ```
 Other scripts such as .py and .sh files should be in the root folder.
 
-###Template README.md
-A readme.md template can be found [here](link-to-template).
+### Template README.md
+A readme.md template can be found [here](https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines/blob/moving_templates_and_such/readme_template.md).
 
 [back to TOC](#table-of-contents)
 
@@ -440,7 +450,7 @@ This defines the steps you would like to perform when you push changes.
 Your workflow should run at minimum each time a push or a pull request is made to the master.
 It is also recomended to run a [scheduled](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule) workflow once a day, in-case a dependency of your project is updated and breaks your code.
 
-An example workflow can be found [here](link-to-be-added)
+An example workflow can be found [here](https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines/blob/moving_templates_and_such/workflow_example.md)
 
 
 ### Further information
