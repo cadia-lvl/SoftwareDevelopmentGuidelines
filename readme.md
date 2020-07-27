@@ -197,7 +197,7 @@ Translating from the SÍM requirements to these deliverables will need to be dis
 * Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
 
 ### Contribution guidelines
-To contribute to this project please submit a pull request to the master branch and request a review from someone in the software guidelines team. If you have a lot of suggestions feel to make multiple requests. 
+To contribute to this project please submit a pull request to the master branch and request a review from someone in the software guidelines team. If you have a lot of suggestions feel free to make multiple requests. 
 
 ### Dictionary
 
