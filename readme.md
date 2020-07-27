@@ -14,7 +14,7 @@ This is work in progress.
      <li><a href="#goals">Goals</a></li>
      <li><a href="#contributors">Contributors</a></li>
      <li><a href="#deliverables">Deliverables</a></li>
-     <li><a href="#contributors">Contributors>/a><li>
+     <li><a href="#contributors">Contributors</a><li>
      <li><a href="#contribution-guidelines">Contribution Guidelines</a><li>
      <li><a href="#dictionary">Dictionary</a></li>
     </ul>
