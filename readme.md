@@ -77,11 +77,11 @@ Center for Analysis and Design of Intelligent Agents, Language and Voice Lab <br
 - [10. Style](#10-style)
 - [11. Continuous integration](#11-continuous-integration)
 	- [11.1. What is Continuous integration?](#111-what-is-continuous-integration)
-	- [11.3. Getting started with Github Actions](#113-getting-started-with-github-actions)
-		- [11.3.1. Triggering workflows](#1131-triggering-workflows)
-		- [11.3.2. Jobs](#1132-jobs)
-		- [11.3.3. Example of a workflow:](#1133-example-of-a-workflow)
-	- [11.4. Further information](#114-further-information)
+	- [11.2. Getting started with Github Actions](#112-getting-started-with-github-actions)
+		- [11.2.1. Triggering workflows](#1121-triggering-workflows)
+		- [11.2.2. Jobs](#1122-jobs)
+		- [11.2.3. Example of a workflow:](#1123-example-of-a-workflow)
+	- [11.3. Further information](#113-further-information)
 - [12. Packaging / Releasing](#12-packaging--releasing)
 	- [12.1. All deliverables](#121-all-deliverables)
 	- [12.2. Further information](#122-further-information)
@@ -210,7 +210,7 @@ Main authors <email.addresses>
 ## Acknowledgements
 If the funding is from a public grant, mention the source of the funding and link to their website.
 
-214: "This project was funded by the Language Technology Programme for Icelandic 2019-2023. The programme, which is managed and coordinated by [Almannarómur](https://almannaromur.is/), is funded by the Icelandic Ministry of Science and Culture."
+"This project was funded by the Language Technology Programme for Icelandic 2019-2023. The programme, which is managed and coordinated by [Almannarómur](https://almannaromur.is/), is funded by the Icelandic Ministry of Science and Culture."
 
 # Contributing (Optional)
 Explain how people can contribute to this repository. This can also link to a separate Developer reference (Contributing.md)
@@ -241,7 +241,7 @@ We want our code to be freely available for everyone so we prefer permissive lic
 - MIT License (very permissive)
 - CC BY 4.0 (for resources)
 
-245: For more help choosing a license, see [Choosing a license](https://choosealicense.com/). Keep in mind that if you are working through SÍM you have agreed to use open licenses such as these. Furthermore, according to RU are the copyright owner.
+For more help choosing a license, see [Choosing a license](https://choosealicense.com/). Keep in mind that if you are working through SÍM you have agreed to use open licenses such as these. Furthermore, according to RU are the copyright owner.
 
 When a license has been chosen, simply copy the license text, fill in any additional information required (like copyright owner and year) and write it to a LICENCE file in the repository.
 
@@ -259,32 +259,32 @@ When a license has been chosen, simply copy the license text, fill in any additi
 #### 5.1.1. Code should be self-documenting 
 When that’s not possible it should be well documented within comments and overall documentation. 
 
-263: In the case of python, documentation can be automatically generated from “docstrings.” Other languages and frameworks have similar features. Use easy to understand variables and function names, that is avoid ambiguous Use consistent styles throughout the whole codebase. The code should also be consistent with the general guidelines of the programming language.
+In the case of python, documentation can be automatically generated from “docstrings.” Other languages and frameworks have similar features. Use easy to understand variables and function names, that is avoid ambiguous Use consistent styles throughout the whole codebase. The code should also be consistent with the general guidelines of the programming language.
 
 #### 5.1.2. Developer documentation
-266: Developer documentation should generally be in English. Developer guides would be like installation guides, API documentation, contribution guidelines, just any information that would help a developer use and modify this  Along these lines, code examples, code snippets, and examples of (function/API) calls and the possible outputs would help users to understand much quicker.
+Developer documentation should generally be in English. Developer guides would be like installation guides, API documentation, contribution guidelines, just any information that would help a developer use and modify this  Along these lines, code examples, code snippets, and examples of (function/API) calls and the possible outputs would help users to understand much quicker.
 
 #### 5.1.3. User guides
-269: User guides should be in the language of the users. User guides is documentation for user facing code. Within LVL example projects which might need user guides are [LOBE](https://github.com/cadia-lvl/LOBE.git) and [Eyra](https://github.com/cadia-lvl/Eyra.git) because both have user interfaces that don't involve code. These guides should also contain lots of examples. This can work as a tutorial within the webpage with popups that walks first through the different steps in a webpage or a standalone guide perhaps with videos or pictures walking users through the more difficult aspects of using the tool or webpage.
+User guides should be in the language of the users. User guides is documentation for user facing code. Within LVL example projects which might need user guides are [LOBE](https://github.com/cadia-lvl/LOBE.git) and [Eyra](https://github.com/cadia-lvl/Eyra.git) because both have user interfaces that don't involve code. These guides should also contain lots of examples. This can work as a tutorial within the webpage with popups that walks first through the different steps in a webpage or a standalone guide perhaps with videos or pictures walking users through the more difficult aspects of using the tool or webpage.
 
 Add research papers to the repository in a docs folder if possible. [Eyra has a conference paper in its docs folder](https://github.com/Eyra-is/Eyra/blob/master/Docs/Petursson_et_al_2016.pdf)
 
 #### 5.1.4. Publishing documentation
-274: Documentation for git repositories can live in the docs folder as a website. Github has a feature called github-pages. This allows us to host a website directory from our code respositories. This is especially useful if we guides or API documentation. Thus, we don't need a whole server just for a few webpages. GitHub has a step by step guide of how to do that on their platform which is linked [here](https://pages.github.com/).
+Documentation for git repositories can live in the docs folder as a website. Github has a feature called github-pages. This allows us to host a website directory from our code respositories. This is especially useful if we guides or API documentation. Thus, we don't need a whole server just for a few webpages. GitHub has a step by step guide of how to do that on their platform which is linked [here](https://pages.github.com/).
 
 #### 5.1.5. More information 
-277: We have provided a template for your projects' [README.md file](readme_template.md). It provides both the minimum sections and the optional sections. You can read more about why those sections here at [GitHub's guide]//guides.github.com/features/wikis/). After you've read that explanation, you can delete whichever sections you don't need. 
+We have provided a template for your projects' [README.md file](readme_template.md). It provides both the minimum sections and the optional sections. You can read more about why those sections here at [GitHub's guide]//guides.github.com/features/wikis/). After you've read that explanation, you can delete whichever sections you don't need. 
 
 
 ### 5.2. APIs
-281: The documentation should explain how to use an endpoint and outline outputs for both good and bad input. Remember, it's better to have some documentation than none at all. These often can be automatically generated and put docs folder in your repository as a html pages which can then be hosted as a Github Pages website.
+The documentation should explain how to use an endpoint and outline outputs for both good and bad input. Remember, it's better to have some documentation than none at all. These often can be automatically generated and put docs folder in your repository as a html pages which can then be hosted as a Github Pages website.
 
 #### 5.2.1. Further information
 - [API documentation example](http://docs.apis.is/)
 - [Eyra API documentation](https://github.com/cadia-lvl/Eyra/blob/master/ClientServerAPI.md)
 
 ### 5.3. Command-line tools
-288: Terminal based software should have a help option: `--help` or `-h` or both. Typing in the filename then either of these options should bring up some text explaining what the script does, an example command, and list the parameters.
+Terminal based software should have a help option: `--help` or `-h` or both. Typing in the filename then either of these options should bring up some text explaining what the script does, an example command, and list the parameters.
 
 [TODO: include code snippets for creating help in python and bash directly in the file.]
 #### 5.3.1. Further information
@@ -308,7 +308,7 @@ In python3.8, creating a help usage is really easy once you import the [argparse
 We all know that documentation is key if software is supposed to be usable.
 Writing documentation can be hard but we have some suggestions to make it easier, but keep in mind that a good `#Running` section the `README.md` is complementary to the documentation, i.e. you need to write both.
 - The `#Running` section handles common use-cases. This can be seen as a small [user guide](#user-guide).
-312: - Write the documentation for functions and classes in your code using your language's conventions since all (common) languages have tools which can extract this documentation. This documentation is more detailed than the  section but can also contain the same examples.
+- Write the documentation for functions and classes in your code using your language's conventions since all (common) languages have tools which can extract this documentation. This documentation is more detailed than the  section but can also contain the same examples.
 
 ### 6.1. Code
 - Use **easy to understand variables and function names**, that is avoid ambiguous names.
@@ -339,7 +339,7 @@ For example:
 - This could be a video guide which go through the same steps as above.
 - This could be implemented as a Wiki on GitHub.
 - This could be implemented as a long `#Running` section.
-343: - If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
+- If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
 
 #### 6.4.1. Python
 We suggest the following format and tool for Python
@@ -368,12 +368,12 @@ For example:
 - This could be a video guide which go through the same steps as above.
 - This could be implemented as a Wiki on GitHub.
 - This could be implemented as a long `#Running` section.
-372: - If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
+- If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
 
 [back to TOC](#table-of-contents)
 
 ## 7. Version control
-377: Within Cadia-LVL, using git for version control is required. A clean repository with descriptive comments makes for a good representation of your project which makes it easier for new developers to join it. The following a way to maintain a project as such.
+Within Cadia-LVL, using git for version control is required. A clean repository with descriptive comments makes for a good representation of your project which makes it easier for new developers to join it. The following a way to maintain a project as such.
 
 
 ### 7.1. Workflow
@@ -501,7 +501,7 @@ TODO
 - Best practices and errors: [`shellcheck`](https://www.shellcheck.net/)
 
 ## 10. Style
-505: Maintaining the same style across a project makes the code more readable. We suggest using a tool which automatically formats/styles your code. This eliminates inconsistent styles in the code and allows you to focus on the rather than the format.
+Maintaining the same style across a project makes the code more readable. We suggest using a tool which automatically formats/styles your code. This eliminates inconsistent styles in the code and allows you to focus on the rather than the format.
 
 ## 11. Continuous integration
 
@@ -513,16 +513,16 @@ We suggest running all these steps automatically in the CI system.
 
 When **working on a project with others** and preferably while working alone, you should use a CI system. We recommend **Github Actions** for this.
 
-### 11.3. Getting started with Github Actions
+### 11.2. Getting started with Github Actions
 Simply navigate to your repository and click the **Actions** on the right side of the *Pull request* button.
 Here you can choose to use workflows from others or click **set up a workflow yourself** to create your own.
 This defines the steps you would like to perform when you push changes.
 
 
-#### 11.3.1. Triggering workflows
+#### 11.2.1. Triggering workflows
 Your workflow should run at minimum each time a push or a pull request is made to the master. It is also recomended to run a [scheduled](https://help.github.com/en/actions/reference/trigger-workflows#scheduled-events-schedule) workflow once a day for building, testing and packaging projects. If workflows take a long time to run it is advisable to run them over night. 
 
-#### 11.3.2. Jobs
+#### 11.2.2. Jobs
 Jobs should at minimum include [testing](#testing) and [packaging](#packaging--releasing) for the project.
 
 Multiple jobs can be specified within each workflow. Besides testing and packaging, which are required, it is also recommended to run a linter on the project to ensure consistent styling across the project.
@@ -530,7 +530,7 @@ Multiple jobs can be specified within each workflow. Besides testing and packagi
 Keep in mind that each job may take no longer than 6 hours to complete or it will be automatically ended.
 
 When running a job we need to specify which machine it [runs on](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on). It is **strongly recommended to use github hosted 
-#### 11.3.3. Example of a workflow:
+#### 11.2.3. Example of a workflow:
 ```
 name: LVL_CI_example
 
@@ -593,7 +593,7 @@ runs-on: ubuntu-latest
 ```
 
 
-### 11.4. Further information
+### 11.3. Further information
 - [Language and framework guidelines](https://help.github.com/en/actions/language-and-framework-guides) 
 - [Packaging on Github](https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions) (optional)
 - [Workflow triggers](https://help.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events)
