@@ -77,7 +77,6 @@ Center for Analysis and Design of Intelligent Agents, Language and Voice Lab <br
 - [10. Style](#10-style)
 - [11. Continuous integration](#11-continuous-integration)
 	- [11.1. What is Continuous integration?](#111-what-is-continuous-integration)
-	- [11.2. What is Continuous integration?](#112-what-is-continuous-integration)
 	- [11.3. Getting started with Github Actions](#113-getting-started-with-github-actions)
 		- [11.3.1. Triggering workflows](#1131-triggering-workflows)
 		- [11.3.2. Jobs](#1132-jobs)
@@ -510,18 +509,9 @@ When **working on a project with others** and preferably while working alone, yo
 
 ### 11.1. What is Continuous integration?
 Continuous integration is a way to **build software (compile), automatically run [tests](#testing), [lint and check documentation](#linting) and alert developers when something is wrong**.
-We suggests running all these steps automatically in the CI system.
-This way developers can fix mistakes before they pile up and become difficult to manage.
-It also gives developers more confidance in their code and minimizes unknown errors. 
+We suggest running all these steps automatically in the CI system.
 
 When **working on a project with others** and preferably while working alone, you should use a CI system. We recommend **Github Actions** for this.
-
-### 11.2. What is Continuous integration?
-Continuous integration is a way to **build software (compile), automatically run [tests](#testing), [lint and check documentation](#linting) and alert developers when something is wrong**.
-We suggests running all these steps automatically in the CI system.
-This way developers can fix mistakes before they pile up and become difficult to manage.
-It also gives developers more confidance in their code and minimizes unknown errors. 
-
 
 ### 11.3. Getting started with Github Actions
 Simply navigate to your repository and click the **Actions** on the right side of the *Pull request* button.
