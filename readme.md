@@ -1,5 +1,5 @@
 <h1 align="center">
-Software Development Guidelines
+LVL Software Development Guidelines
 </h1>
 
 <p align="center"><i>
@@ -139,8 +139,6 @@ It is a good idea to try to maintain a standardized project structure across our
 
 - `README.md`
 - `LICENCE`
-- `CONTRIBUTING.md`
-- `ROADMAP.md`
 - `docs/`
 
 In this example, the docs folder contains other documents. Other scripts such as .py and .sh files should be in the root folder.
