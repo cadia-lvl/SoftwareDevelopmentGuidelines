@@ -40,8 +40,8 @@ Center for Analysis and Design of Intelligent Agents, Language and Voice Lab <br
 	- [5.3. Command-line tools](#53-command-line-tools)
 		- [5.3.1. Further information](#531-further-information)
 	- [5.4. Language/Tool specific documentation help](#54-languagetool-specific-documentation-help)
-		- [5.4.1. help](#541-help)
-		- [5.4.2. tools](#542-tools)
+		- [5.4.1. Help](#541-help)
+		- [5.4.2. Tools](#542-tools)
 - [6. Documentation](#6-documentation)
 	- [6.1. Code](#61-code)
 		- [6.1.1. JavaScript](#611-javascript)
@@ -66,10 +66,6 @@ Center for Analysis and Design of Intelligent Agents, Language and Voice Lab <br
 		- [8.2.1. Browsers](#821-browsers)
 		- [8.2.2. Suggested strategy](#822-suggested-strategy)
 	- [8.3. User testing](#83-user-testing)
-		- [8.3.1. User tests should only be used if you have planned time to make adjustments](#831-user-tests-should-only-be-used-if-you-have-planned-time-to-make-adjustments)
-		- [8.3.2. User testing should focus on a specific task](#832-user-testing-should-focus-on-a-specific-task)
-		- [8.3.3. Up to 4 people for tests](#833-up-to-4-people-for-tests)
-		- [8.3.4. Testing prototypes often gives no useful information](#834-testing-prototypes-often-gives-no-useful-information)
 - [9. Linting](#9-linting)
 	- [9.1. Python](#91-python)
 	- [9.2. JavaScript](#92-javascript)
@@ -297,11 +293,11 @@ Terminal based software should have a help option: `--help` or `-h` or both. Typ
 - [C++](examples.md#C)
 - [Java](examples.md#Java)
 
-#### 5.4.1. help
+#### 5.4.1. Help
 In python3.8, creating a help usage is really easy once you import the [argparse](https://docs.python.org/3/library/argparse.html) package.
 [broadcast_data_prep/master/ruv/extract_from_ruv_api.py has an example at the bottom](https://github.com/cadia-lvl/broadcast_data_prep/blob/master/ruv/extract_from_ruv_api.py)
 
-#### 5.4.2. tools
+#### 5.4.2. Tools
 [List of python tools to auto generate documentation](https://wiki.python.org/moin/DocumentationTools)
 
 ## 6. Documentation
@@ -459,21 +455,17 @@ Suggested tools for automated testing: [Selenium with Python](https://selenium-p
 User testing is a great way to see how the users interact with your product. 
 However, user testing is difficult to do well. When doing user tests keep the following points in mind.
 
-#### 8.3.1. User tests should only be used if you have planned time to make adjustments
-There is no reason to spend time user testing if the results won't be used to make adjustments and improve the product.
+- `User tests should only be used if you have planned time to make adjustments`
+	- There is no reason to spend time user testing if the results won't be used to make adjustments and improve the product.
 
-#### 8.3.2. User testing should focus on a specific task
-Focusing on a specific scope or task helps to keep the user focusing on what is important.
-This does not mean the same user can not test different tasks, only that each task you give the users should be clearly defined.
+- `User testing should focus on a specific task`
+	- Focusing on a specific scope or task helps to keep the user focusing on what is important. This does not mean the same user can not test different tasks, only that each task you give the users should be clearly defined.
 
-#### 8.3.3. Up to 4 people for tests
-Asking too many users to do the same tests will only result in more of the same responses.
-Every users experience matters and should be taken into account.
-If you have more users to test, think about trying to test different things or do another round when adjustments have been made from the first one.
+- `Up to 4 people for tests`
+	- Asking too many users to do the same tests will only result in more of the same responses. Every users experience matters and should be taken into account. If you have more users to test, think about trying to test different things or do another round when adjustments have been made from the first one.
 
-#### 8.3.4. Testing prototypes often gives no useful information 
-Users will most likely point out things that you know are missing and are less likely to give the feedback you are looking for.
-This can be reduced somewhat by targetting very specific tasks early in the development, see point about specific tasks.
+- `Testing prototypes often gives no useful information `
+	- Users will most likely point out things that you know are missing and are less likely to give the feedback you are looking for. This can be reduced somewhat by targetting very specific tasks early in the development, see point about specific tasks.
 
 
 [back to TOC](#table-of-contents)
