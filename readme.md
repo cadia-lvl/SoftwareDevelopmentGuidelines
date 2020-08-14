@@ -1,5 +1,5 @@
 <h1 align="center">
-✨ Software Development Guidelines ✨
+Software Development Guidelines
 </h1>
 
 <p align="center"><i>
