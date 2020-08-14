@@ -21,6 +21,8 @@ LVL Software Development Guidelines
 - [2. About the guide](#2-about-the-guide)
 	- [2.1. Goals](#21-goals)
 	- [2.2. Contributors](#22-contributors)
+	- [TLDR](#tldr)
+	- [Other resources](#other-resources)
 	- [2.3. Deliverables](#23-deliverables)
 	- [2.4. Dictionary](#24-dictionary)
 - [3. Project Structure](#3-project-structure)
@@ -40,10 +42,21 @@ LVL Software Development Guidelines
 	- [5.4. Language/Tool specific documentation help](#54-languagetool-specific-documentation-help)
 		- [5.4.1. help](#541-help)
 		- [5.4.2. tools](#542-tools)
+- [Documentation](#documentation)
+	- [Code](#code)
+		- [Python](#python)
+		- [JavaScript](#javascript)
+	- [Publishing documentation](#publishing-documentation)
+	- [Developer documentation](#developer-documentation)
+	- [User guide](#user-guide)
 - [6. Version control](#6-version-control)
 	- [6.1. Workflow](#61-workflow)
 		- [6.1.1. Branching](#611-branching)
+- [Version control](#version-control)
+	- [Workflow](#workflow)
+		- [Branching](#branching)
 		- [6.1.2. Pull requests](#612-pull-requests)
+		- [Pull requests](#pull-requests)
 	- [6.2. Commits](#62-commits)
 	- [6.3. Semantic versioning](#63-semantic-versioning)
 	- [6.4. Further information](#64-further-information)
@@ -57,6 +70,13 @@ LVL Software Development Guidelines
 		- [7.3.2. User testing should focus on a specific task](#732-user-testing-should-focus-on-a-specific-task)
 		- [7.3.3. Up to 4 people for tests](#733-up-to-4-people-for-tests)
 		- [7.3.4. Testing prototypes often gives no useful information](#734-testing-prototypes-often-gives-no-useful-information)
+- [Linting](#linting)
+	- [Python](#python-1)
+	- [JavaScript](#javascript-1)
+	- [Bash](#bash)
+- [Style](#style)
+	- [Python](#python-2)
+	- [JavaScript](#javascript-2)
 - [8. Continuous integration](#8-continuous-integration)
 	- [8.1. What is Continuous integration?](#81-what-is-continuous-integration)
 	- [8.2. Getting started with Github Actions](#82-getting-started-with-github-actions)
@@ -98,13 +118,25 @@ These guidelines should help us achieve the following goals:
 - Help us write **quality software** by following good software development proceedures.
 - Enable **collaboration** by having collaboration as a part of our workflow.
 
-
 ### 2.2. Contributors
 <a href="https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=cadia-lvl/SoftwareDevelopmentGuidelines" />
 </a>
 <!-- Made with [contributors-img](https://contributors-img.web.app). -->
 
+### TLDR
+The guide can be summarized as the following:
+- Have a good `README.md`, see our [template](#template-readme.md).
+- Provide a `License`.
+- Write documentation within the code so that you can automatically generate it later (if you need to).
+- Use `git` for semantic versioning.
+- Test your code, preferably automatically.
+- Setup "GitHub actions" to run testing and linting.
+- Check out our [examples](#examples).
+
+### Other resources
+- [Compute](https://github.com/cadia-lvl/compute) for information about the cluster (called Terra) at LVL.
+- [SÍM guidelines](SIM_software_development_standards.pdf) for writing and delivering software.
 
 ### 2.3. Deliverables
 The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the deliverable types APP, MOD, ADD-ON, WEB and RES.
@@ -121,6 +153,8 @@ Translating from the SÍM requirements to these deliverables will need to be dis
 
 ### 2.4. Dictionary
 
+
+
 | Word   | Meaning                                                |
 | :----- | :-----------------------------------------------------:|
 | ADD-ON | a plugin to a larger framework                         |
@@ -129,6 +163,7 @@ Translating from the SÍM requirements to these deliverables will need to be dis
 | CI     | Continuous Integration                                 |
 | MOD    | a module which can be embedded into other applications |
 | RES    | language resource                                      |
+| IDE    | Integrated development environment                     |
 
 [back to TOC](#table-of-contents)
 
@@ -136,13 +171,15 @@ Translating from the SÍM requirements to these deliverables will need to be dis
 
 ## 3. Project Structure
 
-It is a good idea to try to maintain a standardized project structure across our projects, as they always need to contain certain things. We suggest the following:
+Try to maintain a standardized project structure across your projects, as they always need to contain certain things. We suggest the following:
 
-- `README.md`
-- `LICENCE`
-- `docs/`
+```
+README.md  # See template below
+LICENSE    # See license section
+docs/      # Contains automatically generated documentation in HTML.
+```
 
-In this example, the docs folder contains other documents. Other scripts such as .py and .sh files should be in the root folder.
+Other scripts such as .py and .sh files should be in the root folder.
 
 ### 3.1. Template README.md
 ```
@@ -167,7 +204,7 @@ For the program to be easily usable this section can be quite long.
 If lengthy, this should be a separate document placed as HTML into the `docs/` folder. For more inforation see `documentation`
 
 # License
-Mention which LICENSE the code uses. For more information about licensing see later.
+Mention which LICENSE the code uses and refer to the LICENSE file. For more information about licensing later.
 
 # Authors/Credit
 Reykjavik University
@@ -179,8 +216,8 @@ If the funding is from a public grant, mention the source of the funding and lin
 
 "This project was funded by the Language Technology Programme for Icelandic 2019-2023. The programme, which is managed and coordinated by [Almannarómur](https://almannaromur.is/), is funded by the Icelandic Ministry of Education, Science and Culture."
 
-# Contribution guidelines (Optional)
-Explain how people can contribute to this repository. This can also link to a separate Developer reference
+# Contributing (Optional)
+Explain how people can contribute to this repository. This can also link to a separate Developer reference (Contributing.md)
 
 * how to contribute
 * creating issues
@@ -271,13 +308,50 @@ In python3.8, creating a help usage is really easy once you import the [argparse
 #### 5.4.2. tools
 [List of python tools to auto generate documentation](https://wiki.python.org/moin/DocumentationTools)
 
-- [Sphinx](https://www.sphinx-doc.org/en/master/) : automatically creates documentation from docstrings. [example of PyTorch documentation generated by Sphinx](https://pytorch.org/docs/stable/nn.html#parameters)
-- pdoc3 : Another python documentation tool is pdoc3 which also uses docstrings. Installing it is as easy as `pip3 install pdoc3`. Generating the documentation is `pdoc --html --output-dir docs <path-to-your-module-with-init-py>`. There should be no subdirectories.
+## Documentation
+We all know that documentation is key if software is supposed to be usable.
+Writing documentation can be hard but we have some suggestions to make it easier, but keep in mind that a good `#Running` section the `README.md` is complementary to the documentation, i.e. you need to write both.
+- The `#Running` section handles common use-cases. This can be seen as a small [user guide](#user-guide).
+- Write the documentation for functions and classes in your code using your language's conventions since all (common) languages have tools which can extract this documentation. This documentation is more detailed than the `#Running` section but can also contain the same examples.
 
+### Code
+- Use **easy to understand variables and function names**, that is avoid ambiguous names.
+- Settle on a **single format** for the documentation. This is for automatic documentation generation.
+- When you have settled on a format, find a **tool** which supports that format which can generate HTML and place it in the `docs/` folder.
+- Write documentation in English, unless you have a good reason not to do so.
+- Be sure to define **accepted inputs** and **return values**.
+
+
+#### Python
+We suggest the following format and tool for Python
+- Format: [Google](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings). It's easily readable in code, widely support and not verbose.
+- Tool: [`Sphinx` with `napoleon`](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html)
+
+#### JavaScript
+TODO
+
+### Publishing documentation
+Given that you have generated HTML pages using your documentation tool, this documentation can be hosted on GitHub using [github-pages](https://pages.github.com/).
+This allows us to host a website directory from our code respositories.
+This avoids us having to host the documentation in some remote server.
+
+### Developer documentation
+For larger projects a developer guide can be helpful for newcomers.
+These contain **installation guides** and **contribution guidelines** or any information that would help a developer use and modify this codebase faster.
+Place this information into `Contributing.md`.
+
+### User guide
+User guides are (generally) **not as technical** as documentation and are thought for the **end-user**.
+For larger projects which require a user guide the guide should be in the **language of the user**.
+These guides should contain **a lot of examples** and lead the user through common-use cases.
+For example:
+- This could be implemented as a tutorial within a webpage with popups that guide the user through the UI.
+- This could be a video guide which go through the same steps as above.
+- This could be implemented as a Wiki on GitHub.
+- This could be implemented as a long `#Running` section.
+- If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.python.org/3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
 
 [back to TOC](#table-of-contents)
-
----
 
 ## 6. Version control
 Within Cadia-LVL, using git for version control is required. A clean repository with descriptive comments makes for a good representation of your project which makes it easier for new developers to join it. The following guidelines describe a way to maintain a project as such.
@@ -289,13 +363,35 @@ If a project is public, **the master branch should always contain production rea
 #### 6.1.1. Branching
 For smaller projects and teams, feature branching is sufficient, where each feature gets a branch, created from master, used while developing until it is merged into the master.
 
-For larger projects, [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) is the recommended workflow. It includes two main branches, the master branch that stores release history and a development branch that lives between the master branch and feature branches. It also recommends a clear way to implement hotfixes.
+## Version control
+Within Cadia-LVL, using git for version control is required. A clean repository with descriptive commit messages makes for a good representation of your project which makes it easier for new developers to join it. The following guidelines describe a way to maintain a project as such.
+
+### Workflow
+If a project is public, **the master branch should always contain production ready code**.
+All merges to the master branch should include semantic version tags as listed below.
+
+#### Branching
+For smaller projects and teams, **feature branching** is sufficient, where each feature gets a branch, created from master, used while developing until it is merged into the master.
+
+For larger projects, [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) is the recommended workflow. It includes **two main branches**, the master branch that stores release history and a development branch that lives between the master branch and feature branches. It also recommends a clear way to implement hotfixes.
 
 #### 6.1.2. Pull requests
 When adding new features or updates to the master branch, developers should write a pull request and let at least one other team member review their code before merging.
 
-Code reviews across projects are recommended but not required. Keeping more team members informed about your work can benefit the team as a whole.
+#### Pull requests
+When you have finished your work on the feature branch you should create a **pull request** to the master branch.
+Assign **someone other than yourself to review** the pull request (the code).
+The **reviewer is responsible** for making sure that everything is (within limits) tested and documented.
+If the reviewer has issues with the pull request (very common) the reviewer **requests fixes** and repeats this process until satisfied.
+When there are no more issues, the **reviewer accepts the pull request** and merges it into the main branch.
 
+To clearly state the benefits of this, if enforced:
+- No-one works in isolation, more people understand the project.
+- Code quality generally increases.
+- More tests are written.
+- The project is well documented.
+
+For more information about pull requests see [here](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
 
 ### 6.2. Commits
 Every commit message should include a short description of work being commited. Pull request comments should be more detailed. 
@@ -307,9 +403,8 @@ Version tags can be informative, especially to current users. Given a version nu
 - Patch: Backwards compatible fixes, ***when you fix bugs***
 
 ### 6.4. Further information
-- [Read more about semantic versioning](https://semver.org/)
-- [How to use tags to apply semantic versioning](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag)
-- [Back to top](https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines#table-of-contents)
+[Read more about semantic versioning](https://semver.org/) and [how to use tags to apply semantic versioning](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag)
+
 
 [back to TOC](#table-of-contents)
 
@@ -384,17 +479,48 @@ This can be reduced somewhat by targetting very specific tasks early in the deve
 
 ---
 
+## Linting
+Linters perform **static analysis** on code without running it.
+They alert you of **possible errors**, **missing documentation** or **overly complex code** without writing tests.
+They are easily incorporated into the [continuous integration system](#continuous-integration).
+Using (some) linters is **required** in all projects.
+Adding linters to your **IDE** is very easy and can be configured to run on file-save.
+
+### Python
+For Python we suggest the following tools for all projects.
+- Common errors: [`flake8`](https://github.com/PyCQA/flake8)
+- Type checks: [`mypy`](https://github.com/python/mypy)
+- Documentation checker: [`pydocstyle`](https://github.com/PyCQA/pydocstyle)
+
+### JavaScript
+TODO
+
+### Bash
+- Best practices and errors: [`shellcheck`](https://www.shellcheck.net/)
+
+## Style
+Maintaining the same style across a project makes the code more readable. We suggest using a tool which automatically formats/styles your code. This eliminates inconsistent styles in the code and allows you to focus on the code, rather than the format.
+
+### Python
+We highly suggest [`black`](https://github.com/psf/black)
+
+### JavaScript
+
 ## 8. Continuous integration
 
-When **working on a project with others** and preferably while working alone, **Github Actions should be used for continuous integration**.
+When **working on a project with others** and preferably while working alone, you should use a CI system. We recommend **Github Actions** for this.
 
 ### 8.1. What is Continuous integration?
-Continuous integration is a way to **build software, automaticly run tests and alert developers when a test doesn't pass**. This way developers can fix mistakes before they pile up and become difficult to manage. It also gives developers more confidance in their code and minimizes unknown errors. 
+Continuous integration is a way to **build software (compile), automatically run [tests](#testing), [lint and check documentation](#linting) and alert developers when something is wrong**.
+We suggests running all these steps automatically in the CI system.
+This way developers can fix mistakes before they pile up and become difficult to manage.
+It also gives developers more confidance in their code and minimizes unknown errors. 
 
 
 ### 8.2. Getting started with Github Actions
 Simply navigate to your repository and click the **Actions** on the right side of the *Pull request* button.
 Here you can choose to use workflows from others or click **set up a workflow yourself** to create your own.
+This defines the steps you would like to perform when you push changes.
 
 #### 8.2.1. Triggering workflows
 Your workflow should run at minimum each time a push or a pull request is made to the master. It is also recomended to run a [scheduled](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule) workflow once a day for building, testing and packaging projects. If workflows take a long time to run it is advisable to run them over night. 
