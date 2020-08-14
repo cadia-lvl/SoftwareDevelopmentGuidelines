@@ -5,7 +5,7 @@ LVL Software Development Guidelines
 <p align="center"><i>
 This repository contains the software development guidelines for LVL.<br/>
 Center for Analysis and Design of Intelligent Agents, Language and Voice Lab <br/>
-Reykjavik University - School of Computer Science, Menntavegur 1, IS-101 Reykjavik, Iceland
+<a href="https://ru.is">Reykjavik University</a>
 </i></p>
 
 <img src="https://user-images.githubusercontent.com/9976294/86356451-cddbc780-bc5b-11ea-89fb-f2d5d242d661.png" alt="Cover Image" align="center"/>
