@@ -16,6 +16,7 @@ LVL Software Development Guidelines
 
 <details>
 <summary>Click to expand</summary>
+
 - [1. Notes for writing the guide](#1-notes-for-writing-the-guide)
 - [2. About the guide](#2-about-the-guide)
 	- [2.1. Goals](#21-goals)
