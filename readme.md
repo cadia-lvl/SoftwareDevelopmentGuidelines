@@ -1,160 +1,118 @@
-# LVL Software development guidelines
-This repository contains the software development guidelines for LVL.
+<h1 align="center">
+LVL Software Development Guidelines
+</h1>
 
-This is work in progress.
+<p align="center"><i>
+This repository contains the software development guidelines for LVL.<br/>
+Center for Analysis and Design of Intelligent Agents, Language and Voice Lab <br/>
+<a href="https://ru.is">Reykjavik University</a>
+</i></p>
 
+<img src="https://user-images.githubusercontent.com/9976294/86356451-cddbc780-bc5b-11ea-89fb-f2d5d242d661.png" alt="Cover Image" align="center"/>
+<!-- <div>Icons made by <a href="https://www.flaticon.com/free-icon/strategy_2819519?term=Roadmap&page=1&position=5" title="surang">surang</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></-->
+
+<!-- omit in toc -->
 ## Table of Contents
-<details>
-<summary>Click to see table of contents</summary>
- <br/>
- <ol>
-  <details>
-   <summary><a href="#about-the-guide">About the guide</a></summary>
-    <ul>
-     <li><a href="#goals">Goals</a></li>
-     <li><a href="#deliverables">Deliverables</a></li>
-     <li><a href="#contributors">Contributors</a><li>
-     <li><a href="#contribution-guidelines">Contribution Guidelines</a><li>
-     <li><a href="#dictionary">Dictionary</a></li>
-    </ul>
-  </details>
-  <details>
-   <summary><a href="#project-structure">Project Structure</a></summary>
-   <ul>
-    <li><a href="#template-readmemd">README template</a></li>
-   </ul>
-  </details>
-  <details>
-   <summary><a href="#license">License</a></summary>
-  </details>
-  <details>
-   <summary><a href="#documentation">Documentation</a></summary>
-   <ul>
-    <li><a href="#all-projects">All Projects</a>
-     <ul>
-    <li><a href="#code-should-be-self-documenting">Code should be self-documenting</a></li>
-    <li><a href="#developer-documentation">Developer documentation](#</a></li>
-    <li><a href="#user-guides">User guides</a></li>
-    <li><a href="#git-documentation">Git documentation</a></li>
-    <li><a href="#more-information">More information</a></li>
-   </ul>
-    </li>
-    <li><a href="#apis">APIs</a>
-     <ul>
-      <li><a href="#further-information">Further information</a></li>
-     </ul>
-    </li>
-    <li><a href="#command-line-tools">Command-line tools</a>
-     <ul>
-      <li><a href="#further-information-1">Further information</a></li>
-     </ul>
-    </li>
-    <li><a href="#languagetool-specific-documentation-help">Language/Tool specific documentation help</a>
-     <ul>
-      <li><a href="#help">help</a></li>
-      <li><a href="#tools">tools</a></li>
-     </ul>
-    </li>
-   </ul>
-  </details>
-  <details>
-  <summary><a href="#version-control">Version control</a></summary>
-  <ul>
-   <li><a href="#workflow">Workflow</a>
-    <ul>
-     <li><a href="#branching">Branching</a></li>
-     <li><a href="#pull-requests">Pull requests</a></li>
-    </ul>
-   </li>
-   <li><a href="#commits">Commits</a></li>
-   <li><a href="#semantic-versioning">Semantic versioning</a></li>
-   <li><a href="#further-information-2">Further information</a></li>
-  </ul>
-  </details>
-  <details>
-  <summary><a href="#testing">Testing</a></summary>
-  <ul>
-   <li><a href="#code">Code</a></li>
-   <li><a href="#web">Web</a>
-    <ul>
-     <li><a href="#browsers">Browsers</a></li>
-     <li><a href="#suggested-strategy">Suggested strategy</a></li>
-    </ul>
-   </li>
-   <li><a href="#user-testing">User testing</a>
-    <ul>
-     <li><a href="#user-tests-should-only-be-used-if-you-have-planned-time-to-make-adjustments">User tests should only be used if you have planned time to make adjustments</a></li>
-     <li><a href="#user-testing-should-focus-on-a-specific-task">User testing should focus on a specific task</a></li>
-     <li><a href="#testing-prototypes-often-gives-no-useful-information">Testing prototypes often gives no useful information</a></li>
-    </ul>
-   </li>
-  </ul>
-  </details>
-  <details>
-   <summary><a href="#continuous-integration">Continuous integration</a></summary>
-   <ul>
-    <li><a href="#what-is-continuous-integration">What is Continuous integration?</a></li>
-    <li><a href="#getting-started-with-github-actions">Getting started with Github Actions</a>
-     <ul>
-      <li><a href="#triggering-workflows">Triggering workflows</a></li>
-      <li><a href="#jobs">Jobs</a></li>
-     </ul>
-    </li>
-    <li><a href="#further-information-3">Further information</a></li>
-   </ul>
-  </details>
-  <details>
-   <summary><a href="#packaging--releasing">Packaging / Releasing</a></summary>
-   <ul>
-    <li><a href="#all-deliverables">All deliverables</a></li>
-    <li><a href="#further-information-4">Further information</a></li>
-   </ul>
-  </details>
-  <details>
-   <summary><a href="#examples">Examples</a></summary>
-   <ul>
-    <li><a href="#python-library">Python library</a></li>
-    <li><a href="#pytorch-model">PyTorch model</a></li>
-    <li><a href="#javascript">JavaScript</a></li>
-    <li><a href="#bash">Bash</a>
-     <ul>
-      <li><a href="#documentation-1">Documentation</a></li>
-     </ul>
-    </li>
-    <li><a href="#kaldi-recipes">Kaldi recipes</a>
-     <ul>
-      <li><a href="#readme">README</a></li>
-      <li><a href="#documentation-2">Documentation:</a></li>
-     </ul>
-    </li>
-    <li><a href="#c">C++</a></li>
-    <li><a href="java">Java</a>
-     <ul>
-      <li><a href="#documentation-3">Documentation</a></li>
-     </ul>
-    </li>
-   </ul>
-  </details>
-</ol>
-</details>
-<!-- <a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>-->
 
-## Notes for writing the guide
+<details>
+<summary>Click to expand</summary>
+
+- [1. Notes for writing the guide](#1-notes-for-writing-the-guide)
+- [2. About the guide](#2-about-the-guide)
+	- [2.1. Goals](#21-goals)
+	- [2.2. TLDR](#22-tldr)
+	- [2.3. Other resources](#23-other-resources)
+	- [2.4. Deliverables](#24-deliverables)
+	- [2.5. Contributors](#25-contributors)
+    - [2.5.1. Maintainers](#25-maintainers)
+	- [2.6. Dictionary](#26-dictionary)
+- [3. Project Structure](#3-project-structure)
+	- [3.1. Template README.md](#31-template-readmemd)
+- [4. License](#4-license)
+- [5. Documentation](#5-documentation)
+	- [5.1. All Projects](#51-all-projects)
+		- [5.1.1. Code should be self-documenting](#511-code-should-be-self-documenting)
+		- [5.1.2. Developer documentation](#512-developer-documentation)
+		- [5.1.3. User guides](#513-user-guides)
+		- [5.1.4. Publishing documentation](#514-publishing-documentation)
+		- [5.1.5. More information](#515-more-information)
+	- [5.2. APIs](#52-apis)
+		- [5.2.1. Further information](#521-further-information)
+	- [5.3. Command-line tools](#53-command-line-tools)
+		- [5.3.1. Further information](#531-further-information)
+	- [5.4. Language/Tool specific documentation help](#54-languagetool-specific-documentation-help)
+		- [5.4.1. Help](#541-help)
+		- [5.4.2. Tools](#542-tools)
+- [6. Documentation](#6-documentation)
+	- [6.1. Code](#61-code)
+		- [6.1.1. JavaScript](#611-javascript)
+	- [6.2. Publishing documentation](#62-publishing-documentation)
+	- [6.3. Developer documentation](#63-developer-documentation)
+	- [6.4. User guide](#64-user-guide)
+		- [6.4.1. Python](#641-python)
+		- [6.4.2. JavaScript](#642-javascript)
+	- [6.5. Publishing documentation](#65-publishing-documentation)
+	- [6.6. Developer documentation](#66-developer-documentation)
+	- [6.7. User guide](#67-user-guide)
+- [7. Version control](#7-version-control)
+	- [7.1. Workflow](#71-workflow)
+		- [7.1.1. Branching](#711-branching)
+		- [7.1.2. Pull requests](#712-pull-requests)
+	- [7.2. Commits](#72-commits)
+	- [7.3. Semantic versioning](#73-semantic-versioning)
+	- [7.4. Further information](#74-further-information)
+- [8. Testing](#8-testing)
+	- [8.1. Code](#81-code)
+	- [8.2. Web](#82-web)
+		- [8.2.1. Browsers](#821-browsers)
+		- [8.2.2. Suggested strategy](#822-suggested-strategy)
+	- [8.3. User testing](#83-user-testing)
+- [9. Linting](#9-linting)
+	- [9.1. Python](#91-python)
+	- [9.2. JavaScript](#92-javascript)
+	- [9.3. Bash](#93-bash)
+- [10. Style](#10-style)
+- [11. Continuous integration](#11-continuous-integration)
+	- [11.1. What is Continuous integration?](#111-what-is-continuous-integration)
+	- [11.2. Getting started with Github Actions](#112-getting-started-with-github-actions)
+		- [11.2.1. Triggering workflows](#1121-triggering-workflows)
+		- [11.2.2. Jobs](#1122-jobs)
+		- [11.2.3. Example of a workflow:](#1123-example-of-a-workflow)
+	- [11.3. Further information](#113-further-information)
+- [12. Packaging / Releasing](#12-packaging--releasing)
+	- [12.1. All deliverables](#121-all-deliverables)
+	- [12.2. Further information](#122-further-information)
+- [13. Examples](#13-examples)
+	- [13.1. Python library](#131-python-library)
+	- [13.2. PyTorch model](#132-pytorch-model)
+	- [13.3. Web Technologies](#133-web-technologies)
+		- [13.3.1. JavaScript](#1331-javascript)
+	- [13.4. Bash](#134-bash)
+		- [13.4.1. Documentation](#1341-documentation)
+	- [13.5. Kaldi recipes](#135-kaldi-recipes)
+		- [13.5.1. README](#1351-readme)
+		- [13.5.2. Documentation:](#1352-documentation)
+	- [13.6. C++](#136-c)
+	- [13.7. Java](#137-java)
+		- [13.7.1. Documentation](#1371-documentation)
+</details>
+
+## 1. Notes for writing the guide
 This should be removed before releasing the guide.
 
 - This guide should be short and simple and mention what is required or optional
 - Offer examples
 - Add links to good resources
 
-## About the guide
+## 2. About the guide
 
-### Goals
+### 2.1. Goals
 These guidelines should help us achieve the following goals:
 - Make our lives **easier** by not having to reinvent the wheel in each of our induvidual projects and find **good resources** and guides which we are all aware of.
 - Help us write **quality software** by following good software development proceedures.
 - Enable **collaboration** by having collaboration as a part of our workflow.
 
-### TLDR
+### 2.2. TLDR
 The guide can be summarized as the following:
 - Have a good `README.md`, see our [template](#template-readme.md).
 - Provide a `License`.
@@ -164,11 +122,11 @@ The guide can be summarized as the following:
 - Setup "GitHub actions" to run testing and linting.
 - Check out our [examples](#examples).
 
-### Other resources
+### 2.3. Other resources
 - [Compute](https://github.com/cadia-lvl/compute) for information about the cluster (called Terra) at LVL.
 - [SÍM guidelines](SIM_software_development_standards.pdf) for writing and delivering software.
 
-### Deliverables
+### 2.4. Deliverables
 The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the deliverable types APP, MOD, ADD-ON, WEB and RES.
 
 These types are quite abstract and LVL does not deliver all of them.
@@ -181,24 +139,22 @@ Due to this we further break down these deliverables to offer more concrete guid
 
 Translating from the SÍM requirements to these deliverables will need to be discussed with a SÍM project manager to answer the question of "what do they expect?".
 
-### Contributors
+### 2.5. Contributors
+To contribute to this project please submit a pull request to the master branch and request a review from someone in the software guidelines team. If you have a lot of suggestions feel free to make multiple requests.
 <a href="https://github.com/cadia-lvl/SoftwareDevelopmentGuidelines/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=cadia-lvl/SoftwareDevelopmentGuidelines" />
 </a>
 <!-- Made with [contributors-img](https://contributors-img.web.app). -->
 
-#### Names and emails of contributors 
+#### 2.5.1. Maintainers
 
 * Haukur Páll Jónsson <haukurpj@ru.is>
 * Judy Yum Fong <judyfong@ru.is>
 * Ólafur Helgi Jónsson <olafurhj@ru.is>
 * Sunneva Þorsteinsdóttir <sunnevath@ru.is>
-* Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
+* Þorsteinn Daði Gunnarsson <thorsteinng@ru.is
 
-### Contribution guidelines
-To contribute to this project please submit a pull request to the master branch and request a review from someone in the software guidelines team. If you have a lot of suggestions feel free to make multiple requests. 
-
-### Dictionary
+### 2.6. Dictionary
 
 | Word   | Meaning                                                |
 | :----- | :-----------------------------------------------------:|
@@ -214,7 +170,8 @@ To contribute to this project please submit a pull request to the master branch 
 
 ---
 
-## Project Structure
+## 3. Project Structure
+
 Try to maintain a standardized project structure across your projects, as they always need to contain certain things. We suggest the following:
 
 ```
@@ -222,14 +179,15 @@ README.md  # See more information below
 LICENSE    # See license section
 docs/      # Contains automatically generated documentation in HTML.
 ```
+
 Other scripts such as .py and .sh files should be in the root folder.
 
-### Template README.md
+### 3.1. Template README.md
 A readme.md template can be found [here](./readme_template.md).
 
 [back to TOC](#table-of-contents)
 
-## License
+## 4. License
 All of the projects we work on need to have licenses. A single LICENSE file, mentioned and linked from the README, suffices. Adding a license header in every single file is optional.
 
 If a project does not contain a license, the default copyright is in place which means that no-one is allowed to make derivative work with your code.
@@ -239,47 +197,42 @@ We want our code to be freely available for everyone so we prefer permissive lic
 - MIT License (very permissive)
 - CC BY 4.0 (for resources)
 
-For more help choosing a license, see [Choosing a license](https://choosealicense.com/). Keep in mind that if you are working through SÍM you have agreed to use open licenses such as these. Furthermore, according to RU contracts you are the copyright owner.
+For more help choosing a license, see [Choosing a license](https://choosealicense.com/). Keep in mind that if you are working through SÍM you have agreed to use open licenses such as these. Furthermore, according to RU are the copyright owner.
 
 When a license has been chosen, simply copy the license text, fill in any additional information required (like copyright owner and year) and write it to a LICENCE file in the repository.
-
 
 [back to TOC](#table-of-contents)
 
 ---
 
-## Documentation
+## 5. Documentation
 We all know that documentation is key if software is supposed to be usable.
 Writing documentation can be hard but we have some suggestions to make it easier, but keep in mind that a good `#Running` section the `README.md` is complementary to the documentation, i.e. you need to write both.
 - The `#Running` section handles common use-cases. This can be seen as a small [user guide](#user-guide).
-- Write the documentation for functions and classes in your code using your language's conventions since all (common) languages have tools which can extract this documentation. This documentation is more detailed than the `#Running` section but can also contain the same examples.
+- Write the documentation for functions and classes in your code using your language's conventions since all (common) languages have tools which can extract this documentation. This documentation is more detailed than the  section but can also contain the same examples.
 
-### Code
+### 5.1. Code
 - Use **easy to understand variables and function names**, that is avoid ambiguous names.
 - Settle on a **single format** for the documentation. This is for automatic documentation generation.
 - When you have settled on a format, find a **tool** which supports that format which can generate HTML and place it in the `docs/` folder.
 - Write documentation in English, unless you have a good reason not to do so.
 - Be sure to define **accepted inputs** and **return values**.
 
-#### Python
+#### 5.1.1. Python
 We suggest the following format and tool for Python
 - Format: [Google](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings). It's easily readable in code, widely support and not verbose.
 - Tool: [`Sphinx` with `napoleon`](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html)
 
-#### JavaScript
-TODO
-
-### Publishing documentation
+### 5.2. Publishing documentation
 Given that you have generated HTML pages using your documentation tool, this documentation can be hosted on GitHub using [github-pages](https://pages.github.com/).
 This allows us to host a website directory from our code respositories.
 This avoids us having to host the documentation in some remote server.
 
-### Developer documentation
+### 5.3. Developer documentation
 For larger projects a developer guide can be helpful for newcomers.
 These contain **installation guides** and **contribution guidelines** or any information that would help a developer use and modify this codebase faster.
-Place this information into `Contributing.md`.
 
-### User guide
+### 5.4. User guide
 User guides are (generally) **not as technical** as documentation and are thought for the **end-user**.
 For larger projects which require a user guide the guide should be in the **language of the user**.
 These guides should contain **a lot of examples** and lead the user through common-use cases.
@@ -288,26 +241,29 @@ For example:
 - This could be a video guide which go through the same steps as above.
 - This could be implemented as a Wiki on GitHub.
 - This could be implemented as a long `#Running` section.
-- If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.python.org/3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
+- If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
 
 [back to TOC](#table-of-contents)
 
----
+## 6. Version control
+Within Cadia-LVL, using git for version control is required. A clean repository with descriptive comments makes for a good representation of your project which makes it easier for new developers to join it. The following a way to maintain a project as such.
 
-## Version control
-Within Cadia-LVL, using git for version control is required. A clean repository with descriptive commit messages makes for a good representation of your project which makes it easier for new developers to join it. The following guidelines describe a way to maintain a project as such.
+### 6.1. Workflow
+We use the [GitHub flow](https://guides.github.com/introduction/flow/) workflow.
+We further clarify how we use this workflow in the next sections.
 
-### Workflow
-If a project is public, **the master branch should always contain production ready code**.
-All merges to the master branch should include semantic version tags as listed below.
+. All merges to the master branch should include semantic version tags as listed below.
 
-#### Branching
-For smaller projects and teams, **feature branching** is sufficient, where each feature gets a branch, created from master, used while developing until it is merged into the master.
+Here is a short guide 
 
-For larger projects, [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) is the recommended workflow. It includes **two main branches**, the master branch that stores release history and a development branch that lives between the master branch and feature branches. It also recommends a clear way to implement hotfixes.
+#### 6.1.1. Branching
+In short, **the master branch should always contain production ready code**.
+To achieve this, create "feature branches" from the master branch.
+In the feature branch you develop your changes.
+When the work is done, create/open a "Pull Request" in GitHub.
 
-#### Pull requests
-When you have finished your work on the feature branch you should create a **pull request** to the master branch.
+#### 6.1.2. Pull requests
+When you have finished working on the feature branch you should create a **pull request** to the master branch.
 Assign **someone other than yourself to review** the pull request (the code).
 The **reviewer is responsible** for making sure that everything is (within limits) tested and documented.
 If the reviewer has issues with the pull request (very common) the reviewer **requests fixes** and repeats this process until satisfied.
@@ -321,49 +277,55 @@ To clearly state the benefits of this, if enforced:
 
 For more information about pull requests see [here](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
 
-### Commits
-Every commit message should include a short description of work being commited. Pull request comments should be more detailed. 
+### 6.2. Commits
+Every commit message should include a short description of work being commited.
+Pull request comments should be more detailed.
 
-### Semantic versioning
+### 6.3. Semantic versioning
 Version tags can be informative, especially to current users. Given a version number *v[major].[minor].[patch]*, increments represent the following:
 - Major: Incompatible API changes, ***when you break something***
 - Minor: Added backwards compatible functionality, ***when you add features***
 - Patch: Backwards compatible fixes, ***when you fix bugs***
 
+### 6.4. Further information
 [Read more about semantic versioning](https://semver.org/) and [how to use tags to apply semantic versioning](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag)
 
 [back to TOC](#table-of-contents)
 
 ---
 
-## Testing
-TODO: Add motivation
+## 7. Testing
+How do you know that your code works?
+No-one writes code that is without bugs, and even though you could, testing the code might provide useful feedback (design, userability, architecture, etc.).
+We suggest testing your code often and thouroughly.
+Since doing that "manually" can be dull and cumbersome, we further suggest making these tests automatic.
 
-
-### Code
+### 7.1. Unit tests
+Unit tests are conceptually the smallest tests possible, they can be thought of as "function tests", i.e. testing wether the function works.
 All projects should attempt to do as much unit testing as possible.
 At minimum aim to have tests for mission critical algorithms and functions.
-Unit tests inside each module cover this nicely but the implementation is dependent on the programming language and environment. 
+Every programming language has a unit testing framework, google it.
 
+- Python: [pytest](https://docs.pytest.org/en/stable/)
 
-### Web
+### 7.2. Web
 A huge part of the web is portability and accessibility, so making sure your website works on all major devices and platforms is very important.
 
-#### Browsers
+#### 7.2.1. Browsers
 When testing your website keep in mind the demographic that will be using the site, what devices they are using (mobile vs. desktop), and which browsers.
 Preferebly test each deplpoyment on these devices and browsers.
 You can see browsers usage statistics [here](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables) to decide which browsers to test.
 
 Major browsers on desktop are:
 
-- Chrome, 
-- Firefox, 
-- Safari, and 
+- Chrome
+- Firefox 
+- Safari 
 - Edge
 
 Major browsers for mobile are: 
-- Chrome, 
-- Safari. and 
+- Chrome 
+- Safari 
 - Samsung Internet
 
 [Caniuse.com](https://caniuse.com/) is helpful if you are unsure about browser support for specific features.
@@ -371,7 +333,7 @@ Major browsers for mobile are:
 If for some specific and clear reason a particular browser is needed make sure it is clearly stated on the page.
 You can use the [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) HTTP header to display warnings to all unsopported browsers.
 
-#### Suggested strategy
+#### 7.2.2. Deployment strategy
 Keep two entirely separate deployments up and running, staging and production.
 Deploy all changes first to the staging environment (this can be done automatically).
 
@@ -380,157 +342,114 @@ This part could be done automatically but is often time consuming and difficlut 
 Suggested tools for automated testing: [Selenium with Python](https://selenium-python.readthedocs.io/index.html) and (Cucumber)[https://github.com/cucumber/cucumber]
 
 
-### User testing
+### 7.3. User testing
 User testing is a great way to see how the users interact with your product. 
-However, user testing is difficult to do well. When doing user tests keep the following points in mind.
+However, user testing is difficult to do well.
+When doing user tests keep the following points in mind.
 
-#### User tests should only be used if you have planned time to make adjustments
-There is no reason to spend time user testing if the results won't be used to make adjustments and improve the product.
+- `User tests should only be used if you have planned time to make adjustments`
+	- There is no reason to spend time user testing if the results won't be used to make adjustments and improve the product.
 
-#### User testing should focus on a specific task
-Focusing on a specific scope or task helps to keep the user focusing on what is important.
-This does not mean the same user can not test different tasks, only that each task you give the users should be clearly defined.
+- `User testing should focus on a specific task`
+	- Focusing on a specific scope or task helps to keep the user focusing on what is important. This does not mean the same user can not test different tasks, only that each task you give the users should be clearly defined.
 
-#### Up to 4 people for tests
-Asking too many users to do the same tests will only result in more of the same responses.
-Every users experience matters and should be taken into account.
-If you have more users to test, think about trying to test different things or do another round when adjustments have been made from the first one.
+- `Up to 4 people for tests`
+	- Asking too many users to do the same tests will only result in more of the same responses. Every users experience matters and should be taken into account. If you have more users to test, think about trying to test different things or do another round when adjustments have been made from the first one.
 
-#### Testing prototypes often gives no useful information 
-Users will most likely point out things that you know are missing and are less likely to give the feedback you are looking for.
-This can be reduced somewhat by targetting very specific tasks early in the development, see point about specific tasks.
+- `Testing prototypes often gives no useful information `
+	- Users will most likely point out things that you know are missing and are less likely to give the feedback you are looking for. This can be reduced somewhat by targetting very specific tasks early in the development, see point about specific tasks.
 
 
 [back to TOC](#table-of-contents)
 
 ---
 
-## Linting
+## 8. Supporting tools
+When writing code, additional tools can help you find bugs, make your code look consistent and generally help you write better code.
+
+### 8.1. Linters
 Linters perform **static analysis** on code without running it.
 They alert you of **possible errors**, **missing documentation** or **overly complex code** without writing tests.
-They are easily incorporated into the [continuous integration system](#continuous-integration).
+They are easily incorporated into the continuous integration system and should be run on "Push" to notify of errors.
 Using (some) linters is **required** in all projects.
 Adding linters to your **IDE** is very easy and can be configured to run on file-save.
 
-### Python
+### 8.1.1. Python
 For Python we suggest the following tools for all projects.
 - Common errors: [`flake8`](https://github.com/PyCQA/flake8)
 - Type checks: [`mypy`](https://github.com/python/mypy)
 - Documentation checker: [`pydocstyle`](https://github.com/PyCQA/pydocstyle)
 
-### JavaScript
+### 8.1.2. JavaScript
 TODO
 
-### Bash
+### 8.1.3. Bash
 - Best practices and errors: [`shellcheck`](https://www.shellcheck.net/)
 
-## Style
-Maintaining the same style across a project makes the code more readable. We suggest using a tool which automatically formats/styles your code. This eliminates inconsistent styles in the code and allows you to focus on the code, rather than the format.
+## 8.2. Style
+Maintaining the same style across a project makes the code more readable.
+We suggest using a tool which automatically formats/styles your code.
+This eliminates inconsistent styles in the code and allows you to focus on the rather than the format.
 
-### Python
+### 8.2.1. Python
 We highly suggest [`black`](https://github.com/psf/black)
 
-### JavaScript
+## 9. Continuous integration
+Continuous integration is a way to **build software (compile), automatically run tests, lint, check documentation and alert developers when something is wrong**.
+We suggest running all these steps automatically in the CI system.
+We suggest using **Github Actions** as a CI system for all your projects.
 
-## Continuous integration
-
-When **working on a project with others** and preferably while working alone, you should use a CI system. We recommend **Github Actions** for this.
-
-### What is Continuous integration?
-Continuous integration is a way to **build software (compile), automatically run [tests](#testing), [lint and check documentation](#linting) and alert developers when something is wrong**.
-We suggests running all these steps automatically in the CI system.
-This way developers can fix mistakes before they pile up and become difficult to manage.
-It also gives developers more confidance in their code and minimizes unknown errors. 
-
-### Getting started with Github Actions
+### 9.1. Github Actions
 Simply navigate to your repository and click the **Actions** on the right side of the *Pull request* button.
 Here you can choose to use workflows from others or click **set up a workflow yourself** to create your own.
 This defines the steps you would like to perform when you push changes.
 
-#### Triggering workflows
 Your workflow should run at minimum each time a push or a pull request is made to the master.
 It is also recomended to run a [scheduled](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule) workflow once a day, in-case a dependency of your project is updated and breaks your code.
 
 An example workflow can be found [here](./workflow_example.md)
 
-
-### Further information
+#### 9.1.1. Further information
 - [Language and framework guidelines](https://help.github.com/en/actions/language-and-framework-guides) 
 - [Packaging on Github](https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions) (optional)
 - [Workflow triggers](https://help.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events)
 - [Further on triggering workflows](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#on).
 - [Further on jobs](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs).
 
-
 [back to TOC](#table-of-contents)
 
 ---
 
-## Packaging / Releasing
-When a project should be released it should be packaged so that it can be easily used by the intended users. The packaging depends on the deliverable type, see [deliverables](#deliverables).
+## 10. Packaging / Releasing
+When a project should be released try to:
+- Package it so that it can be **easily used by other people**.
+- Make sure that it includes all the main parts mentioned in the [2.2. TLDR](#22-tldr) section.
+- Make sure that all changes have been committed and a proper README file is in place so that the release process can be repeated by someone else.
 
-General reference for specific deliverables:
-- UI: Compiled and optimized executable.
-- Server: Compiled and optimized executable.
-- Library: According to language convention.
-- Model: Model files uploaded to CLARIN. Reference to a git tag.
-- Command line: Compiled and optimized executable.
-
-Packaging should be done after [testing](#testing) and be a part of the [continuous integration](#continuous-integration) setup for all projects (excluding models).
-
-### All deliverables
-All deliverables should be provided along with instructions on how to run them and examples.
-
+### 10.1. Versioning
 All deliverables should be referenced with a git tag (f.ex. a version).
 This is done so that the code of a deliverable can be easily reviewed and for easy recreation.
 
-When releasing an artifact, be sure that all changes have been committed and a proper README file is in place so that the release process can be repeated by someone else.
+### 10.2. Python
+We suggest using `poetry` for dependency management, building and packaging.
 
+### 10.3. Docker
 For more complex deliverables (which have many dependencies) we also recommend packaging the deliverable using docker.
-
-### Further information
-- An example on how to make pip packages can be found [here](https://packaging.python.org/tutorials/packaging-projects/).
-- An example of a pip package is the [Mideind tokenizer](https://github.com/mideind/Tokenizer#installation) 
-
 
 [back to TOC](#table-of-contents)
 
 ---
 
-## Examples
+## 11. Examples
+- An example of good documentation is provided: [kaldi-asr](http://kaldi-asr.org/doc/about.html#about_reference)
 
-### Python library
+## 12. Other resources
+- [Web Technologies reference](https://developer.mozilla.org/en-US/docs/Web)
+- [bash help usage example](https://github.com/cadia-lvl/broadcast_data_prep/blob/master/ruv/compare_hypothesis_and_expanded_888.sh)
+- [Better Programming has a short list of Bash Best Practices](https://medium.com/better-programming/best-practices-for-bash-scripts-17229889774d)
+- Explains the Kaldi folder structure: [kaldi-for-dummies](http://kaldi-asr.org/doc/kaldi_for_dummies.html#kaldi_for_dummies_directories)
 
-### PyTorch model
-
-### Web Technologies
-[Web Technologies reference](https://developer.mozilla.org/en-US/docs/Web)
-
-#### JavaScript
-JavaScript backend & frontend
-
-### Bash
-
-#### Documentation
-[bash help usage example](https://github.com/cadia-lvl/broadcast_data_prep/blob/master/ruv/compare_hypothesis_and_expanded_888.sh)
-
-[Better Programming has a short list of Bash Best Practices](https://medium.com/better-programming/best-practices-for-bash-scripts-17229889774d)
-
-### Kaldi recipes
-
-#### README
-Explains the folder structure: [kaldi-for-dummies](http://kaldi-asr.org/doc/kaldi_for_dummies.html#kaldi_for_dummies_directories)
-
-#### Documentation: 
-A good documentation is provided: [kaldi-asr](http://kaldi-asr.org/doc/about.html#about_reference)
-
-### C++
-
-[Google C++ style guide](https://google.github.io/styleguide/cppguide.html)
-
-### Java
-
-#### Documentation
-[Maven](https://maven.apache.org/) automatically creates documentation for your API.
+## 13. License
+CC BY 4.0
 
 [back to TOC](#table-of-contents)
