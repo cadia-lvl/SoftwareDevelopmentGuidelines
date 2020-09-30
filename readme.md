@@ -12,8 +12,9 @@ This is work in progress.
    <summary><a href="#about-the-guide">About the guide</a></summary>
     <ul>
      <li><a href="#goals">Goals</a></li>
-     <li><a href="#contributors">Contributors</a></li>
      <li><a href="#deliverables">Deliverables</a></li>
+     <li><a href="#contributors">Contributors</a><li>
+     <li><a href="#contribution-guidelines">Contribution Guidelines</a><li>
      <li><a href="#dictionary">Dictionary</a></li>
     </ul>
   </details>
@@ -97,7 +98,6 @@ This is work in progress.
      <ul>
       <li><a href="#triggering-workflows">Triggering workflows</a></li>
       <li><a href="#jobs">Jobs</a></li>
-      <li><a href="#example-of-a-workflow">Example of a workflow:</a></li>
      </ul>
     </li>
     <li><a href="#further-information-3">Further information</a></li>
@@ -187,6 +187,17 @@ Translating from the SÍM requirements to these deliverables will need to be dis
 </a>
 <!-- Made with [contributors-img](https://contributors-img.web.app). -->
 
+#### Names and emails of contributors 
+
+* Haukur Páll Jónsson <haukurpj@ru.is>
+* Judy Yum Fong <judyfong@ru.is>
+* Ólafur Helgi Jónsson <olafurhj@ru.is>
+* Sunneva Þorsteinsdóttir <sunnevath@ru.is>
+* Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
+
+### Contribution guidelines
+To contribute to this project please submit a pull request to the master branch and request a review from someone in the software guidelines team. If you have a lot of suggestions feel free to make multiple requests. 
+
 ### Dictionary
 
 | Word   | Meaning                                                |
@@ -207,63 +218,14 @@ Translating from the SÍM requirements to these deliverables will need to be dis
 Try to maintain a standardized project structure across your projects, as they always need to contain certain things. We suggest the following:
 
 ```
-README.md  # See template below
+README.md  # See more information below
 LICENSE    # See license section
 docs/      # Contains automatically generated documentation in HTML.
 ```
 Other scripts such as .py and .sh files should be in the root folder.
 
 ### Template README.md
-```
-# Title 
-Project description as a paragraph or so explaining what this project does and perhaps why.
-
-# Table of Contents
-[Easy to use TOC generator](https://ecotrust-canada.github.io/markdown-toc/)
-
-# Installation
-
-* software requirements
-* dependencies
-
-It is also helpful to provide commands which assist user installing the program or even providing an `install.sh` script which does it for the user.
-
-# Running
-How to run the program/application/model and common use-cases and outputs.
-For the program to be easily usable this section can be quite long.
-
-## API reference (Optional)
-If lengthy, this should be a separate document placed as HTML into the `docs/` folder. For more inforation see `documentation`
-
-# License
-Mention which LICENSE the code uses and refer to the LICENSE file. For more information about licensing later.
-
-# Authors/Credit
-Reykjavik University
-
-Main authors <email.addresses>
-
-## Acknowledgements
-If the funding is from a public grant, mention the source of the funding and link to their website.
-
-"This project was funded by the Language Technology Programme for Icelandic 2019-2023. The programme, which is managed and coordinated by [Almannarómur](https://almannaromur.is/), is funded by the Icelandic Ministry of Education, Science and Culture."
-
-# Contributing (Optional)
-Explain how people can contribute to this repository. This can also link to a separate Developer reference (Contributing.md)
-
-* how to contribute
-* creating issues
-* where to get data
-* testing
-
-## Description of folder structure (Optional)
-
-# Changelog/Versions (Optional)
-# Papers/References (Optional)
-You would have a citation snippet here as a code block
-```
-For papers not yet accepted it is fine to mention you have submitted a paper to a particular conference and mention how you
-will reference it once has been accepted. For example you could add a citation or include the paper in the docs folder. 
+A readme.md template can be found [here](./readme_template.md).
 
 [back to TOC](#table-of-contents)
 
@@ -489,67 +451,7 @@ This defines the steps you would like to perform when you push changes.
 Your workflow should run at minimum each time a push or a pull request is made to the master.
 It is also recomended to run a [scheduled](https://help.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule) workflow once a day, in-case a dependency of your project is updated and breaks your code.
 
-#### Example of a workflow:
-```
-name: LVL_CI_example
-
-# on controls when this specific action will run.
-on:
-  # The event/s you want to trigger this action
-  [push, pull_request]:
-    # Which branch/es the action will run on
-    branches: [ master ]
-
-#job defines a sequence of tasks that will run when this workflow is triggered. 
-job: 
-  # A unique id for a job containing only _ or letters, this one is called build
-  build:
-    # Specifies which kind of machine the job is run on. 
-    # It's up to you which machine to use but github hosted runners are highly encouraged.
-    runs-on: ubuntu-latest
-    
-    #steps defines a tasks to run as part of the job, the following steps 
-    steps: 
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
-      #--build project--
-      
-      ## Below are some examples of how to run code
-      
-      - name: example 1
-      run: echo run can run scripts
-      
-      - name: example 2
-      run: |
-      echo it can also run
-      echo multi-line scripts
-      
-      # this example uses a code from another file
-      - name: example 3
-        uses: ./.github/actions/my-action
-      
-      
-      
-  test: 
-     runs-on: ubuntu-latest
-     
-     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
-      #--run your tests--
-      
-  package:
-    runs-on: ubuntu-latest
-     
-     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      
-      #--run your packaging steps--
-  
-```
+An example workflow can be found [here](./workflow_example.md)
 
 
 ### Further information
@@ -557,7 +459,7 @@ job:
 - [Packaging on Github](https://help.github.com/en/actions/publishing-packages-with-github-actions/about-packaging-with-github-actions) (optional)
 - [Workflow triggers](https://help.github.com/en/actions/reference/events-that-trigger-workflows#webhook-events)
 - [Further on triggering workflows](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#on).
-- Further on jobs](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs).
+- [Further on jobs](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs).
 
 
 [back to TOC](#table-of-contents)
