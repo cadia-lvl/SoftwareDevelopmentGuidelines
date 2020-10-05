@@ -380,10 +380,13 @@ For Python we suggest the following tools for all projects.
 - Documentation checker: [`pydocstyle`](https://github.com/PyCQA/pydocstyle)
 
 ### 8.1.2. JavaScript
-TODO
+- Best practices and errors: [`eslint`](https://www.npmjs.com/package/eslint)
 
 ### 8.1.3. Bash
 - Best practices and errors: [`shellcheck`](https://www.shellcheck.net/)
+
+### 8.1.4. CSS
+- Best practices and errors: [`stylelint`](https://www.npmjs.com/package/stylelint)
 
 ## 8.2. Style
 Maintaining the same style across a project makes the code more readable.
