@@ -218,7 +218,7 @@ For example:
 [back to TOC](#table-of-contents)
 
 ## 6. Version control
-Within Cadia-LVL, using git for version control is required. A clean repository with descriptive comments makes for a good representation of your project which makes it easier for new developers to join it. The following a way to maintain a project as such.
+Within Cadia-LVL, using git for version control is required. A clean repository with descriptive comments makes for a good representation of your project which makes it easier for new developers to join it. The following is a way to maintain a project as such.
 
 ### 6.1. Workflow
 We use the [GitHub flow](https://guides.github.com/introduction/flow/) workflow.
@@ -260,7 +260,8 @@ Version tags can be informative, especially to current users. Given a version nu
 - Patch: Backwards compatible fixes, ***when you fix bugs***
 
 ### 6.4. Further information
-[Read more about semantic versioning](https://semver.org/) and [how to use tags to apply semantic versioning](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag)
+- [Read more about semantic versioning](https://semver.org/) and [how to use tags to apply semantic versioning](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-tag).
+- Developers and maintainers of a project should always [Watch](https://docs.github.com/en/free-pro-team@latest/rest/reference/activity#watching) their repos to be notified of all issues and pull requests created.
 
 [back to TOC](#table-of-contents)
 
