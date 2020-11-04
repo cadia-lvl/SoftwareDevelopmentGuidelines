@@ -180,7 +180,7 @@ When a license has been chosen, simply copy the license text, fill in any additi
 ## 5. Documentation
 We all know that documentation is key if software is supposed to be usable.
 Writing documentation can be hard but we have some suggestions to make it easier, but keep in mind that a good `#Running` section the `README.md` is complementary to the documentation, i.e. you need to write both.
-- The `#Running` section handles common use-cases. This can be seen as a small [user guide](#user-guide).
+- The `#Running` section handles common use-cases. This can be seen as a small [user guide](#54-user-guide).
 - Write the documentation for functions and classes in your code using your language's conventions since all (common) languages have tools which can extract this documentation. This documentation is more detailed than the  section but can also contain the same examples.
 
 ### 5.1. Code
@@ -224,7 +224,7 @@ Within Cadia-LVL, using git for version control is required. A clean repository 
 We use the [GitHub flow](https://guides.github.com/introduction/flow/) workflow.
 We further clarify how we use this workflow in the next sections.
 
-. All merges to the master branch should include semantic version tags as listed below.
+All merges to the master branch should include semantic version tags as listed below.
 
 Here is a short guide 
 
@@ -312,7 +312,7 @@ Deploy all changes first to the staging environment (this can be done automatica
 
 Preferably have multiple users test all major changes on the staging deployment before deploying to production.
 This part could be done automatically but is often time consuming and difficlut to keep up to date.
-Suggested tools for automated testing: [Selenium with Python](https://selenium-python.readthedocs.io/index.html) and (Cucumber)[https://github.com/cucumber/cucumber]
+Suggested tools for automated testing: [Selenium with Python](https://selenium-python.readthedocs.io/index.html) and [Cucumber](https://github.com/cucumber/cucumber)
 
 
 ### 7.3. User testing
