@@ -87,20 +87,20 @@ These guidelines should help us achieve the following goals:
 
 ### 2.2. TLDR
 The guide can be summarized as the following:
-- Have a good `README.md`, see our [template](#template-readme.md).
+- Have a good `README.md`, see our [template](readme_template.md).
 - Provide a `License`.
 - Write documentation within the code so that you can automatically generate it later (if you need to).
 - Use `git` for semantic versioning.
 - Test your code, preferably automatically.
 - Setup "GitHub actions" to run testing and linting.
-- Check out our [examples](#examples).
+- Check out our [examples](#11-examples).
 
 ### 2.3. Other resources
 - [Compute](https://github.com/cadia-lvl/compute) for information about the cluster (called Terra) at LVL.
 - [SÍM guidelines](SIM_software_development_standards.pdf) for writing and delivering software.
 
 ### 2.4. Deliverables
-The [SÍM guidelines](https://docs.google.com/document/d/1O_yhAnMVft6AJNoRjOFFRwnZKN8YmEE6GNM_8w1tq14/edit) define the deliverable types APP, MOD, ADD-ON, WEB and RES.
+The [SÍM guidelines](SIM_software_development_standards.pdf) define the deliverable types APP, MOD, ADD-ON, WEB and RES.
 
 These types are quite abstract and LVL does not deliver all of them.
 Due to this we further break down these deliverables to offer more concrete guidelines:
@@ -180,7 +180,7 @@ When a license has been chosen, simply copy the license text, fill in any additi
 ## 5. Documentation
 We all know that documentation is key if software is supposed to be usable.
 Writing documentation can be hard but we have some suggestions to make it easier, but keep in mind that a good `#Running` section the `README.md` is complementary to the documentation, i.e. you need to write both.
-- The `#Running` section handles common use-cases. This can be seen as a small [user guide](#user-guide).
+- The `#Running` section handles common use-cases. This can be seen as a small [user guide](#54-user-guide).
 - Write the documentation for functions and classes in your code using your language's conventions since all (common) languages have tools which can extract this documentation. This documentation is more detailed than the  section but can also contain the same examples.
 
 ### 5.1. Code
@@ -213,7 +213,7 @@ For example:
 - This could be a video guide which go through the same steps as above.
 - This could be implemented as a Wiki on GitHub.
 - This could be implemented as a long `#Running` section.
-- If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
+- If working with the command-line your program should support `--help / -h` commands which should offer some text explaining what the script does, examples and description of parameters. For Python [argparse](https://docs.python.org/3/library/argparse.html) and [click](https://click.palletsprojects.com/en/7.x/) make it easy to get this functionality.
 
 [back to TOC](#table-of-contents)
 
@@ -224,7 +224,7 @@ Within Cadia-LVL, using git for version control is required. A clean repository 
 We use the [GitHub flow](https://guides.github.com/introduction/flow/) workflow.
 We further clarify how we use this workflow in the next sections.
 
-. All merges to the master branch should include semantic version tags as listed below.
+All merges to the master branch should include semantic version tags as listed below.
 
 Here is a short guide 
 
@@ -304,7 +304,7 @@ Major browsers for mobile are:
 [Caniuse.com](https://caniuse.com/) is helpful if you are unsure about browser support for specific features.
 
 If for some specific and clear reason a particular browser is needed make sure it is clearly stated on the page.
-You can use the [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) HTTP header to display warnings to all unsopported browsers.
+You can use the [User-Agent](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) HTTP header to display warnings to all unsupported browsers.
 
 #### 7.2.2. Deployment strategy
 Keep two entirely separate deployments up and running, staging and production.
@@ -312,7 +312,7 @@ Deploy all changes first to the staging environment (this can be done automatica
 
 Preferably have multiple users test all major changes on the staging deployment before deploying to production.
 This part could be done automatically but is often time consuming and difficlut to keep up to date.
-Suggested tools for automated testing: [Selenium with Python](https://selenium-python.readthedocs.io/index.html) and (Cucumber)[https://github.com/cucumber/cucumber]
+Suggested tools for automated testing: [Selenium with Python](https://selenium-python.readthedocs.io/index.html) and [Cucumber](https://github.com/cucumber/cucumber)
 
 
 ### 7.3. User testing
