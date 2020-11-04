@@ -87,7 +87,7 @@ These guidelines should help us achieve the following goals:
 
 ### 2.2. TLDR
 The guide can be summarized as the following:
-- Have a good `README.md`, see our [template](#readme_template.md).
+- Have a good `README.md`, see our [template](readme_template.md).
 - Provide a `License`.
 - Write documentation within the code so that you can automatically generate it later (if you need to).
 - Use `git` for semantic versioning.
