@@ -123,9 +123,8 @@ To contribute to this project please submit a pull request to the master branch 
 
 * Haukur Páll Jónsson <haukurpj@ru.is>
 * Judy Yum Fong <judyfong@ru.is>
-* Sunneva Þorsteinsdóttir <sunnevath@ru.is>
 * Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
-
+* Staffan J. S. Hedström <staffanh@ru.is>
 ### 2.6. Dictionary
 
 | Word   | Meaning                                                |
