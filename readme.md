@@ -406,6 +406,7 @@ When a project should be released try to:
 ### 10.1. Versioning
 All deliverables should be referenced with a git tag (f.ex. a version).
 This is done so that the code of a deliverable can be easily reviewed and for easy recreation.
+- Such as for milestone 4, add the `m4` tag. Here's an example for the [samromur-asr repo](https://github.com/cadia-lvl/samromur-asr/releases/tag/m4).
 
 ### 10.2. Python
 We suggest using `poetry` for dependency management, building and packaging.
