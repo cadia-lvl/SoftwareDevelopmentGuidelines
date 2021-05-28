@@ -185,6 +185,7 @@ Writing documentation can be hard but we have some suggestions to make it easier
 - Write the documentation for functions and classes in your code using your language's conventions since all (common) languages have tools which can extract this documentation. This documentation is more detailed than the  section but can also contain the same examples.
 
 ### 4.1. Code
+- For existing repositories, follow the coding conventions that are already in the repository.
 - Use **easy to understand variables and function names**, that is avoid ambiguous names.
 - Settle on a **single format** for the documentation. This is for automatic documentation generation.
 - When you have settled on a format, find a **tool** which supports that format which can generate HTML and place it in the `docs/` folder.
@@ -236,11 +237,11 @@ In the feature branch you develop your changes.
 When the work is done, create/open a "Pull Request" in GitHub.
 
 #### 5.1.2. Pull requests
-When you have finished working on the feature branch you should create a **pull request** to the master branch.
-Assign **someone other than yourself to review** the pull request (the code).
+When you have finished working on the feature branch you should create a **pull request (PR)** to the master branch.
+Assign **someone other than yourself to review** the pull request (the code). If you request more than one reviewer, the default standard at Cadia-LVL is that only one person must review and approve the PR.
 The **reviewer is responsible** for making sure that everything is (within limits) tested and documented.
-If the reviewer has issues with the pull request (very common) the reviewer **requests fixes** and repeats this process until satisfied.
-When there are no more issues, the **reviewer accepts the pull request** and merges it into the main branch.
+If the reviewer has issues with the pull request (very common) the reviewer **requests changes** and repeats this process until they are satisfied.
+When there are no more issues, the **reviewer approves the pull request** and merges it into the main branch.
 
 To clearly state the benefits of this, if enforced:
 - No-one works in isolation, more people understand the project.
