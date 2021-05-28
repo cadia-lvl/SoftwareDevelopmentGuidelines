@@ -121,10 +121,12 @@ To contribute to this project please submit a pull request to the master branch 
 
 #### 2.5.1. Maintainers
 
-* Haukur Páll Jónsson <haukurpj@ru.is>
+* Gunnar Thor Örnólfsson <gunnaro@ru.is>
 * Judy Yum Fong <judyfong@ru.is>
-* Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
+* Safa Jemai
 * Staffan J. S. Hedström <staffanh@ru.is>
+* Smári Freyr Guðmundsson <smarig@ru.is>
+* Þorsteinn Daði Gunnarsson <thorsteinng@ru.is>
 ### 2.6. Dictionary
 
 | Word   | Meaning                                                |
