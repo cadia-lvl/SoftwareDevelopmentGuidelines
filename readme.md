@@ -91,6 +91,8 @@ The guide can be summarized as the following:
 ### 1.3. Other resources
 - [Compute](https://github.com/cadia-lvl/compute) for information about the cluster (called Terra) at LVL.
 - [SÍM guidelines](SIM_software_development_standards.pdf) for writing and delivering software.
+- [Icelandic NLP resources](https://cadia-lvl.github.io/icelandic-NLP-resources/) to get an overview of existing icelandic resources.
+- [Máltækni fyrir íslensku](https://icelandic-lt.gitlab.io/) - (in Icelandic) overview of language resources from the Language Technology for Icelandic 2019-2023
 
 ### 1.4. Deliverables
 The [SÍM guidelines](SIM_software_development_standards.pdf) define the deliverable types APP, MOD, ADD-ON, WEB and RES.
